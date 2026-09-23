@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* MENU */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 11, 11, 0.95);
+    border-bottom: 1px solid #252525;
+    z-index: 1000;
+}
+
+nav {
+    height: 70px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff6a00;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: #ff6a00;
+}
+
+
+/* ACCUEIL */
+
+.accueil {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 150px 25px 80px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.intro {
+    max-width: 850px;
+}
+
+.orange {
+    color: #ff6a00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+h1 span {
+    color: #ff6a00;
+}
+
+.description {
+    max-width: 600px;
+    color: #999;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.boutons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 1px solid #444;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.bouton:hover {
+    border-color: #ff6a00;
+    color: #ff6a00;
+}
+
+.bouton.principal {
+    background: #ff6a00;
+    border-color: #ff6a00;
+    color: #111;
+}
+
+.bouton.principal:hover {
+    background: #ff8126;
+    color: #111;
+}
+
+.viseur {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+
+    font-size: 100px;
+    color: #292929;
+
+    transform: translateY(-50%);
+}
+
+
+/* SECTIONS */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 25px;
+
+    border-top: 1px solid #222;
+}
+
+.titre-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.titre-section span {
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.titre-section h2 {
+    font-size: 50px;
+}
+
+
+/* PARCOURS */
+
+.ligne {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 40px;
+
+    padding: 30px 0;
+    border-bottom: 1px solid #222;
+}
+
+.annee {
+    color: #ff6a00;
+    font-weight: bold;
+}
+
+.ligne h3,
+.experience h3 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.ligne p,
+.experience p {
+    color: #999;
+    line-height: 1.7;
+}
+
+
+/* PROJETS */
+
+.projets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.projet {
+    min-height: 300px;
+    padding: 30px;
+
+    background: #111;
+    border: 1px solid #292929;
+
+    position: relative;
+
+    transition: 0.2s;
+}
+
+.projet:hover {
+    border-color: #ff6a00;
+    transform: translateY(-5px);
+}
+
+.numero {
+    color: #ff6a00;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.projet h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.projet p {
+    color: #999;
+    line-height: 1.6;
+}
+
+.projet a {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+
+    color: #ff6a00;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* EXPERIENCE */
+
+.experience {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 40px;
+
+    padding: 30px 0;
+    border-bottom: 1px solid #222;
+}
+
+
+/* CONTACT */
+
+.contact p {
+    color: #999;
+    margin-bottom: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 30px 25px;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* TELEPHONE */
+
+@media (max-width: 800px) {
+
+    .menu {
+        display: none;
+    }
+
+    .viseur {
+        display: none;
+    }
+
+    .projets {
+        grid-template-columns: 1fr;
+    }
+
+    .ligne,
+    .experience {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .titre-section h2 {
+        font-size: 38px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
