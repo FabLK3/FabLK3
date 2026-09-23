@@ -3,96 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - BTS SIO</title>
+
+    <title>Fabjo Lami | Portfolio BTS SIO</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">PORTFOLIO<span>.</span></div>
+    <!-- MENU -->
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="#accueil" class="logo">
+                FABJO<span>.</span>
+            </a>
 
             <div class="menu">
                 <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
                 <a href="#parcours">Parcours</a>
+                <a href="#competences">Compétences</a>
                 <a href="#projets">Projets</a>
-                <a href="#experiences">Expériences</a>
                 <a href="#contact">Contact</a>
             </div>
+
+            <div class="menu-status">
+                <span></span> ONLINE
+            </div>
+
         </nav>
     </header>
 
 
     <main>
 
-        <section id="accueil" class="accueil">
+        <!-- ACCUEIL -->
+        <section id="accueil" class="hero">
 
-            <div class="intro">
+            <div class="hero-grid"></div>
 
-                <p class="orange">// PORTFOLIO BTS SIO</p>
+            <div class="hero-content">
+
+                <p class="tag">// PORTFOLIO BTS SIO</p>
+
+                <p class="small-title">BIENVENUE SUR MON PORTFOLIO</p>
 
                 <h1>
-                    BIENVENUE SUR<br>
-                    <span>MON PORTFOLIO</span>
+                    FABJO<br>
+                    <span>LAMI</span>
                 </h1>
 
-                <p class="description">
-                    Étudiant en BTS SIO, je vous présente ici mon parcours,
-                    mes projets et mes expériences dans le domaine de l'informatique.
+                <p class="hero-description">
+                    Étudiant en BTS SIO, je construis mon parcours
+                    dans le domaine de l'informatique et du développement.
                 </p>
 
-                <div class="boutons">
-                    <a href="#projets" class="bouton principal">
+                <div class="hero-buttons">
+                    <a href="#apropos" class="button primary">
+                        DÉCOUVRIR MON PROFIL
+                    </a>
+
+                    <a href="#projets" class="button">
                         VOIR MES PROJETS
                     </a>
-
-                    <a href="#contact" class="bouton">
-                        ME CONTACTER
-                    </a>
                 </div>
 
             </div>
 
-            <div class="viseur">+</div>
+            <div class="crosshair">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="hero-info">
+                <p>STUDENT</p>
+                <p>BTS SIO — SLAM</p>
+                <p>FRANCE</p>
+            </div>
+
+            <div class="scroll">
+                <span></span>
+                SCROLL
+            </div>
 
         </section>
 
 
-        <section id="parcours" class="section">
+        <!-- A PROPOS -->
+        <section id="apropos" class="section">
 
-            <div class="titre-section">
+            <div class="section-title">
                 <span>01</span>
-                <h2>MON PARCOURS</h2>
+                <div>
+                    <p>// PROFILE</p>
+                    <h2>À PROPOS</h2>
+                </div>
             </div>
 
-            <div class="ligne">
+            <div class="about-grid">
 
-                <div class="annee">2023</div>
-
-                <div>
-                    <h3>Baccalauréat</h3>
-
-                    <p>
-                        Obtention de mon baccalauréat et poursuite
-                        de mes études dans le domaine de l'informatique.
-                    </p>
+                <div class="about-number">
+                    <span>01</span>
+                    <p>PROFILE</p>
                 </div>
 
-            </div>
-
-
-            <div class="ligne">
-
-                <div class="annee">2025</div>
-
-                <div>
-                    <h3>BTS SIO</h3>
+                <div class="about-text">
+                    <h3>
+                        QUI SUIS-JE<span>?</span>
+                    </h3>
 
                     <p>
-                        Formation dans le domaine des systèmes informatiques,
-                        du développement et des réseaux.
+                        Je suis <strong>Fabjo Lami</strong>, étudiant en
+                        <strong>BTS SIO</strong>, spécialité SLAM.
+                    </p>
+
+                    <p>
+                        Ce portfolio présente mon parcours, mes compétences,
+                        mes projets ainsi que mon évolution dans le domaine
+                        de l'informatique.
+                    </p>
+
+                    <p class="placeholder">
+                        → Mes informations personnelles seront ajoutées ici.
                     </p>
                 </div>
 
@@ -101,108 +136,272 @@
         </section>
 
 
-        <section id="projets" class="section">
+        <!-- PARCOURS -->
+        <section id="parcours" class="section dark-section">
 
-            <div class="titre-section">
+            <div class="section-title">
                 <span>02</span>
-                <h2>MES PROJETS</h2>
+                <div>
+                    <p>// TIMELINE</p>
+                    <h2>PARCOURS</h2>
+                </div>
             </div>
 
+            <div class="timeline">
 
-            <div class="projets">
+                <div class="timeline-item">
 
-                <div class="projet">
+                    <div class="timeline-date">
+                        2023
+                    </div>
 
-                    <div class="numero">01</div>
+                    <div class="timeline-line"></div>
 
-                    <h3>Projet informatique</h3>
-
-                    <p>
-                        Présentation d'un projet réalisé pendant
-                        ma formation en BTS SIO.
-                    </p>
-
-                    <a href="#">EN SAVOIR PLUS →</a>
+                    <div class="timeline-content">
+                        <p class="orange">FORMATION</p>
+                        <h3>Baccalauréat</h3>
+                        <p>
+                            Informations sur mon parcours scolaire
+                            et l'obtention de mon baccalauréat.
+                        </p>
+                    </div>
 
                 </div>
 
 
-                <div class="projet">
+                <div class="timeline-item">
 
-                    <div class="numero">02</div>
+                    <div class="timeline-date">
+                        2025
+                    </div>
+
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-content">
+                        <p class="orange">FORMATION</p>
+                        <h3>BTS SIO</h3>
+                        <p>
+                            Début de ma formation en BTS Services
+                            Informatiques aux Organisations.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item future">
+
+                    <div class="timeline-date">
+                        2026
+                    </div>
+
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-content">
+                        <p class="orange">EN COURS</p>
+                        <h3>Spécialité SLAM</h3>
+                        <p>
+                            Développement, programmation et réalisation
+                            de projets informatiques.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPETENCES -->
+        <section id="competences" class="section">
+
+            <div class="section-title">
+                <span>03</span>
+                <div>
+                    <p>// SKILLS</p>
+                    <h2>COMPÉTENCES</h2>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <span class="skill-number">01</span>
+                    <h3>Développement</h3>
+                    <p>
+                        Technologies et langages étudiés
+                        pendant ma formation.
+                    </p>
+                    <div class="skill-line"></div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">02</span>
+                    <h3>Réseaux</h3>
+                    <p>
+                        Notions liées aux réseaux et aux
+                        systèmes informatiques.
+                    </p>
+                    <div class="skill-line"></div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">03</span>
+                    <h3>Systèmes</h3>
+                    <p>
+                        Environnement informatique et
+                        administration des systèmes.
+                    </p>
+                    <div class="skill-line"></div>
+                </div>
+
+                <div class="skill-card">
+                    <span class="skill-number">04</span>
+                    <h3>Outils</h3>
+                    <p>
+                        Logiciels et outils utilisés au cours
+                        de ma formation.
+                    </p>
+                    <div class="skill-line"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJETS -->
+        <section id="projets" class="section dark-section">
+
+            <div class="section-title">
+                <span>04</span>
+                <div>
+                    <p>// PROJECTS</p>
+                    <h2>PROJETS</h2>
+                </div>
+            </div>
+
+            <div class="projects-header">
+                <p>
+                    Projets réalisés, en cours de développement
+                    ou prévus pendant ma formation.
+                </p>
+
+                <div class="project-status">
+                    <span></span> PROJECT DATABASE
+                </div>
+            </div>
+
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+
+                    <div class="project-top">
+                        <span>PROJECT_01</span>
+                        <span class="status">À VENIR</span>
+                    </div>
+
+                    <div class="project-icon">&lt;/&gt;</div>
 
                     <h3>Projet développement</h3>
 
                     <p>
-                        Présentation d'un projet lié au développement
-                        informatique.
+                        Présentation d'un futur projet réalisé
+                        dans le cadre de ma formation.
                     </p>
 
-                    <a href="#">EN SAVOIR PLUS →</a>
+                    <div class="project-bottom">
+                        <span>BTS SIO</span>
+                        <span>→</span>
+                    </div>
 
-                </div>
+                </article>
 
 
-                <div class="projet">
+                <article class="project-card">
 
-                    <div class="numero">03</div>
+                    <div class="project-top">
+                        <span>PROJECT_02</span>
+                        <span class="status">EN COURS</span>
+                    </div>
 
-                    <h3>Projet réseau</h3>
+                    <div class="project-icon">{ }</div>
+
+                    <h3>Projet informatique</h3>
 
                     <p>
-                        Présentation d'un projet lié aux réseaux
-                        et aux systèmes informatiques.
+                        Projet actuellement en préparation.
+                        Les informations seront ajoutées prochainement.
                     </p>
 
-                    <a href="#">EN SAVOIR PLUS →</a>
+                    <div class="project-bottom">
+                        <span>SLAM</span>
+                        <span>→</span>
+                    </div>
 
-                </div>
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-top">
+                        <span>PROJECT_03</span>
+                        <span class="status">À VENIR</span>
+                    </div>
+
+                    <div class="project-icon">_</div>
+
+                    <h3>Nouveau projet</h3>
+
+                    <p>
+                        Cet emplacement pourra accueillir
+                        un prochain projet de mon portfolio.
+                    </p>
+
+                    <div class="project-bottom">
+                        <span>COMING SOON</span>
+                        <span>→</span>
+                    </div>
+
+                </article>
 
             </div>
 
         </section>
 
 
-        <section id="experiences" class="section">
+        <!-- CONTACT -->
+        <section id="contact" class="section contact-section">
 
-            <div class="titre-section">
-                <span>03</span>
-                <h2>MES EXPÉRIENCES</h2>
+            <div class="section-title">
+                <span>05</span>
+                <div>
+                    <p>// COMMUNICATION</p>
+                    <h2>CONTACT</h2>
+                </div>
             </div>
 
-            <div class="experience">
-
-                <div class="annee">EXPÉRIENCE</div>
+            <div class="contact-box">
 
                 <div>
-                    <h3>Expérience professionnelle</h3>
+                    <p class="orange">// LET'S TALK</p>
 
-                    <p>
-                        Présentation de mes expériences professionnelles
-                        et des compétences que j'ai pu acquérir.
+                    <h3>
+                        UN PROJET ?<br>
+                        <span>CONTACTEZ-MOI.</span>
+                    </h3>
+
+                    <p class="contact-description">
+                        Vous pouvez me contacter pour échanger
+                        à propos de mon parcours, de mes projets
+                        ou de ma formation.
                     </p>
                 </div>
 
-            </div>
-
-        </section>
-
-
-        <section id="contact" class="section">
-
-            <div class="titre-section">
-                <span>04</span>
-                <h2>CONTACT</h2>
-            </div>
-
-            <div class="contact">
-
-                <p>
-                    Vous souhaitez me contacter ou échanger avec moi ?
-                </p>
-
-                <a href="mailto:contact@example.com" class="bouton principal">
-                    ME CONTACTER
+                <a href="mailto:contact@example.com" class="contact-button">
+                    ENVOYER UN MAIL →
                 </a>
 
             </div>
@@ -212,13 +411,20 @@
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
 
-        <p>© 2026 - Portfolio BTS SIO</p>
+        <div>
+            <strong>FABJO<span>.</span></strong>
+            <p>PORTFOLIO — BTS SIO</p>
+        </div>
 
-        <p>Mon portfolio</p>
+        <p>© 2026 Fabjo Lami</p>
 
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
