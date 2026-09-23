@@ -11,53 +11,81 @@
 
 <body>
 
-    <!-- BARRE DE NAVIGATION -->
+    <!-- CURSEUR -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- FOND -->
+    <div class="background-grid"></div>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- HEADER -->
     <header class="header">
 
-        <nav class="navbar">
+        <a href="#accueil" class="logo">
+            <span class="logo-symbol">◆</span>
+            <span>FABJO<span class="orange">.</span></span>
+        </a>
 
-            <a href="#accueil" class="logo">
-                FL<span>/</span>26
+        <nav class="nav">
+
+            <a href="#accueil" class="nav-link active">
+                <span class="nav-number">01</span>
+                Accueil
             </a>
 
-            <div class="menu">
-                <a href="#accueil" class="active">Accueil</a>
-                <a href="#apropos">À propos</a>
-                <a href="#parcours">Parcours</a>
-                <a href="#competences">Compétences</a>
-                <a href="#projets">Projets</a>
-                <a href="#contact">Contact</a>
-            </div>
+            <a href="#apropos" class="nav-link">
+                <span class="nav-number">02</span>
+                À propos
+            </a>
 
-            <div class="menu-mark">
-                <span></span>
-            </div>
+            <a href="#parcours" class="nav-link">
+                <span class="nav-number">03</span>
+                Parcours
+            </a>
+
+            <a href="#competences" class="nav-link">
+                <span class="nav-number">04</span>
+                Compétences
+            </a>
+
+            <a href="#projets" class="nav-link">
+                <span class="nav-number">05</span>
+                Projets
+            </a>
+
+            <a href="#contact" class="nav-link">
+                <span class="nav-number">06</span>
+                Contact
+            </a>
 
         </nav>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            ONLINE
+        </div>
 
     </header>
 
 
     <main>
 
-        <!-- ================= ACCUEIL ================= -->
+        <!-- ACCUEIL -->
+        <section id="accueil" class="hero section">
 
-        <section id="accueil" class="hero">
+            <div class="hero-lines"></div>
 
-            <div class="hero-background"></div>
+            <div class="hero-content reveal">
 
-            <div class="hero-decoration decoration-one"></div>
-            <div class="hero-decoration decoration-two"></div>
-
-            <div class="hero-content">
-
-                <div class="eyebrow">
-                    <span class="line"></span>
-                    PORTFOLIO — BTS SIO
+                <div class="hud-label">
+                    <span class="hud-cross">+</span>
+                    PORTFOLIO // BTS SIO
                 </div>
 
                 <p class="hero-small">
-                    ÉTUDIANT EN INFORMATIQUE
+                    STUDENT / DEVELOPER
                 </p>
 
                 <h1>
@@ -65,110 +93,112 @@
                     <span>LAMI</span>
                 </h1>
 
-                <p class="hero-text">
-                    Étudiant en BTS SIO, spécialité SLAM.
-                    Découvrez mon parcours, mes compétences
-                    et les projets que je réalise au cours de ma formation.
+                <div class="hero-title-line">
+                    <span></span>
+                    <p>SLAM — SOLUTIONS LOGICIELLES & APPLICATIONS MÉTIERS</p>
+                </div>
+
+                <p class="hero-description">
+                    Bienvenue sur mon portfolio. Découvrez mon parcours,
+                    mes compétences et les projets que je développe
+                    dans le cadre de mon BTS SIO.
                 </p>
 
-                <div class="hero-actions">
+                <div class="hero-buttons">
 
-                    <a href="#apropos" class="button button-orange">
-                        À PROPOS DE MOI
-                        <span>→</span>
+                    <a href="#projets" class="cs-button primary">
+                        <span>EXPLORER MES PROJETS</span>
+                        <b>→</b>
                     </a>
 
-                    <a href="#projets" class="button">
-                        MES PROJETS
-                        <span>→</span>
+                    <a href="#apropos" class="cs-button secondary">
+                        <span>EN SAVOIR PLUS</span>
+                        <b>+</b>
                     </a>
 
                 </div>
 
             </div>
 
-
-            <!-- Petit élément graphique inspiré CS2 -->
-
-            <div class="crosshair">
+            <!-- CROSSHAIR -->
+            <div class="hero-crosshair">
 
                 <div class="crosshair-top"></div>
                 <div class="crosshair-right"></div>
                 <div class="crosshair-bottom"></div>
                 <div class="crosshair-left"></div>
-
                 <div class="crosshair-center"></div>
 
             </div>
 
-
-            <div class="hero-corner">
-                <span>PORTFOLIO</span>
-                <strong>01</strong>
+            <div class="hero-hud hud-left">
+                <span>PLAYER</span>
+                <strong>FABJO</strong>
             </div>
 
+            <div class="hero-hud hud-right">
+                <span>MISSION</span>
+                <strong>BTS SIO</strong>
+            </div>
 
             <div class="scroll-indicator">
-                <span></span>
-                SCROLL
+                <span>SCROLL</span>
+                <div></div>
             </div>
 
         </section>
 
 
-        <!-- ================= A PROPOS ================= -->
+        <!-- À PROPOS -->
+        <section id="apropos" class="section dark-section">
 
-        <section id="apropos" class="section">
-
-            <div class="section-heading">
-
-                <div class="section-number">
-                    01
-                </div>
+            <div class="section-header reveal">
 
                 <div>
-                    <p>// PROFILE</p>
-                    <h2>À PROPOS</h2>
+                    <span class="section-kicker">// PROFILE</span>
+                    <h2>À PROPOS<span>.</span></h2>
                 </div>
+
+                <span class="section-number">02 / 06</span>
 
             </div>
 
+            <div class="about-grid">
 
-            <div class="about-layout">
+                <div class="about-card main-card reveal">
 
-                <div class="about-label">
-                    <span>01</span>
-                    <p>IDENTITÉ</p>
-                </div>
+                    <div class="card-top">
+                        <span>PLAYER PROFILE</span>
+                        <span>ACTIVE</span>
+                    </div>
 
+                    <div class="profile-icon">
+                        FL
+                    </div>
 
-                <div class="about-content">
+                    <h3>Fabjo Lami</h3>
 
-                    <h3>
-                        BIENVENUE SUR<br>
-                        <span>MON PORTFOLIO.</span>
-                    </h3>
-
-                    <p>
-                        Je suis <strong>Fabjo Lami</strong>, étudiant en
-                        BTS SIO, spécialité SLAM.
+                    <p class="role">
+                        Étudiant en BTS SIO — SLAM
                     </p>
 
                     <p>
-                        Ce portfolio a pour objectif de présenter mon parcours,
-                        mes compétences et les différents projets réalisés
-                        ou prévus pendant ma formation.
+                        Je construis progressivement mon parcours dans
+                        le développement informatique et les solutions
+                        logicielles. Ce portfolio présente mon évolution,
+                        mes apprentissages et mes futurs projets.
                     </p>
 
-                    <div class="info-grid">
+                    <div class="profile-line"></div>
 
+                    <div class="profile-data">
                         <div>
                             <small>FORMATION</small>
                             <strong>BTS SIO</strong>
                         </div>
 
                         <div>
-                            <small>SPÉCIALITÉ</small>
+                            <small>OPTION</small>
                             <strong>SLAM</strong>
                         </div>
 
@@ -176,7 +206,44 @@
                             <small>STATUT</small>
                             <strong>ÉTUDIANT</strong>
                         </div>
+                    </div>
 
+                </div>
+
+
+                <div class="about-side">
+
+                    <div class="info-box reveal">
+                        <span class="box-number">01</span>
+                        <div>
+                            <h3>APPRENDRE</h3>
+                            <p>
+                                Développer mes connaissances et progresser
+                                continuellement dans le domaine informatique.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-box reveal">
+                        <span class="box-number">02</span>
+                        <div>
+                            <h3>CRÉER</h3>
+                            <p>
+                                Transformer des idées en applications et
+                                projets concrets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-box reveal">
+                        <span class="box-number">03</span>
+                        <div>
+                            <h3>ÉVOLUER</h3>
+                            <p>
+                                Construire progressivement mon expérience
+                                professionnelle.
+                            </p>
+                        </div>
                     </div>
 
                 </div>
@@ -186,134 +253,129 @@
         </section>
 
 
-        <!-- ================= PARCOURS ================= -->
+        <!-- PARCOURS -->
+        <section id="parcours" class="section">
 
-        <section id="parcours" class="section section-dark">
-
-            <div class="section-heading">
-
-                <div class="section-number">
-                    02
-                </div>
+            <div class="section-header reveal">
 
                 <div>
-                    <p>// TIMELINE</p>
-                    <h2>PARCOURS</h2>
+                    <span class="section-kicker">// CAREER</span>
+                    <h2>PARCOURS<span>.</span></h2>
                 </div>
+
+                <span class="section-number">03 / 06</span>
 
             </div>
 
 
             <div class="timeline">
 
-                <article class="timeline-item">
+                <div class="timeline-item reveal">
 
-                    <div class="timeline-date">
-                        2023
+                    <div class="timeline-marker">
+                        <span>01</span>
                     </div>
-
-                    <div class="timeline-point"></div>
 
                     <div class="timeline-content">
 
-                        <span>FORMATION</span>
+                        <span class="timeline-date">2016 — 2023</span>
 
-                        <h3>Baccalauréat</h3>
+                        <h3>FORMATION SCOLAIRE</h3>
 
                         <p>
-                            Mon parcours scolaire avant mon entrée
-                            dans le domaine de l'informatique.
+                            Parcours scolaire jusqu'à l'obtention
+                            du baccalauréat.
                         </p>
 
                     </div>
 
-                </article>
+                </div>
 
 
-                <article class="timeline-item">
+                <div class="timeline-item reveal">
 
-                    <div class="timeline-date">
-                        2025
+                    <div class="timeline-marker">
+                        <span>02</span>
                     </div>
-
-                    <div class="timeline-point"></div>
 
                     <div class="timeline-content">
 
-                        <span>FORMATION</span>
+                        <span class="timeline-date">2023 — 2025</span>
 
-                        <h3>BTS SIO</h3>
+                        <h3>EXPÉRIENCE PROFESSIONNELLE</h3>
 
                         <p>
-                            Début de ma formation en Services Informatiques
-                            aux Organisations.
+                            Expérience dans le domaine du bâtiment et
+                            découverte du monde professionnel.
                         </p>
 
                     </div>
 
-                </article>
+                </div>
 
 
-                <article class="timeline-item current">
+                <div class="timeline-item current reveal">
 
-                    <div class="timeline-date">
-                        2026
+                    <div class="timeline-marker">
+                        <span>03</span>
                     </div>
-
-                    <div class="timeline-point"></div>
 
                     <div class="timeline-content">
 
-                        <span>EN COURS</span>
+                        <span class="timeline-date">ACTUEL</span>
 
-                        <h3>Spécialité SLAM</h3>
+                        <h3>BTS SIO — SLAM</h3>
 
                         <p>
-                            Développement et réalisation de projets
-                            informatiques dans le cadre de ma formation.
+                            Formation orientée vers le développement,
+                            les applications et les solutions logicielles.
                         </p>
+
+                        <div class="mission-status">
+                            <span></span>
+                            MISSION EN COURS
+                        </div>
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ================= COMPETENCES ================= -->
+        <!-- COMPÉTENCES -->
+        <section id="competences" class="section dark-section">
 
-        <section id="competences" class="section">
-
-            <div class="section-heading">
-
-                <div class="section-number">
-                    03
-                </div>
+            <div class="section-header reveal">
 
                 <div>
-                    <p>// SKILLS</p>
-                    <h2>COMPÉTENCES</h2>
+                    <span class="section-kicker">// LOADOUT</span>
+                    <h2>COMPÉTENCES<span>.</span></h2>
                 </div>
+
+                <span class="section-number">04 / 06</span>
 
             </div>
 
 
-            <div class="skills">
+            <div class="skills-grid">
 
-                <article class="skill">
+                <article class="skill-card reveal">
 
                     <div class="skill-top">
                         <span>01</span>
-                        <span>SLAM</span>
+                        <span>01</span>
                     </div>
 
-                    <h3>Développement</h3>
+                    <div class="skill-icon">&lt;/&gt;</div>
+
+                    <h3>DÉVELOPPEMENT</h3>
 
                     <p>
-                        Langages, programmation et conception
-                        d'applications.
+                        Découverte et apprentissage des principes
+                        de programmation et de développement.
                     </p>
 
                     <div class="skill-bar">
@@ -323,18 +385,20 @@
                 </article>
 
 
-                <article class="skill">
+                <article class="skill-card reveal">
 
                     <div class="skill-top">
                         <span>02</span>
-                        <span>SIO</span>
+                        <span>02</span>
                     </div>
 
-                    <h3>Systèmes</h3>
+                    <div class="skill-icon">{ }</div>
+
+                    <h3>PROGRAMMATION</h3>
 
                     <p>
-                        Environnement informatique et
-                        fonctionnement des systèmes.
+                        Développement progressif de solutions
+                        logicielles dans le cadre du BTS SIO.
                     </p>
 
                     <div class="skill-bar">
@@ -344,18 +408,20 @@
                 </article>
 
 
-                <article class="skill">
+                <article class="skill-card reveal">
 
                     <div class="skill-top">
                         <span>03</span>
-                        <span>NETWORK</span>
+                        <span>03</span>
                     </div>
 
-                    <h3>Réseaux</h3>
+                    <div class="skill-icon">⌘</div>
+
+                    <h3>ENVIRONNEMENT</h3>
 
                     <p>
-                        Notions de réseaux et compréhension
-                        des infrastructures informatiques.
+                        Utilisation d'outils informatiques et découverte
+                        des environnements de développement.
                     </p>
 
                     <div class="skill-bar">
@@ -365,18 +431,20 @@
                 </article>
 
 
-                <article class="skill">
+                <article class="skill-card reveal">
 
                     <div class="skill-top">
                         <span>04</span>
-                        <span>TOOLS</span>
+                        <span>04</span>
                     </div>
 
-                    <h3>Outils</h3>
+                    <div class="skill-icon">◈</div>
+
+                    <h3>PROJET</h3>
 
                     <p>
-                        Utilisation des différents outils
-                        nécessaires à mes projets.
+                        Organisation, recherche et réalisation de
+                        projets au fil de ma formation.
                     </p>
 
                     <div class="skill-bar">
@@ -390,114 +458,112 @@
         </section>
 
 
-        <!-- ================= PROJETS ================= -->
+        <!-- PROJETS -->
+        <section id="projets" class="section">
 
-        <section id="projets" class="section section-dark">
-
-            <div class="section-heading">
-
-                <div class="section-number">
-                    04
-                </div>
+            <div class="section-header reveal">
 
                 <div>
-                    <p>// PROJECTS</p>
-                    <h2>PROJETS</h2>
+                    <span class="section-kicker">// MISSIONS</span>
+                    <h2>PROJETS<span>.</span></h2>
                 </div>
+
+                <span class="section-number">05 / 06</span>
 
             </div>
 
 
-            <div class="projects-intro">
+            <div class="projects-grid">
 
-                <p>
-                    Retrouvez ici mes projets réalisés, en cours
-                    ou prévus dans le cadre de mon parcours.
-                </p>
+                <article class="project-card featured reveal">
 
-                <div class="project-counter">
-                    <span></span>
-                    PROJECTS
-                </div>
+                    <div class="project-image">
 
-            </div>
+                        <div class="project-hud">
+                            <span>MISSION_001</span>
+                            <span>WIP</span>
+                        </div>
 
+                        <div class="project-cross">
+                            +
+                        </div>
 
-            <div class="projects">
+                        <div class="project-placeholder">
+                            PROJECT
+                        </div>
 
-                <article class="project">
-
-                    <div class="project-header">
-                        <span>PROJECT_01</span>
-                        <b>À VENIR</b>
                     </div>
 
-                    <div class="project-number">
-                        01
-                    </div>
+                    <div class="project-content">
 
-                    <h3>Projet développement</h3>
+                        <div class="project-status">
+                            EN COURS
+                        </div>
 
-                    <p>
-                        Un futur projet réalisé dans le cadre
-                        de ma formation BTS SIO.
-                    </p>
+                        <h3>PORTFOLIO BTS SIO</h3>
 
-                    <div class="project-footer">
-                        <span>BTS SIO</span>
-                        <span>→</span>
+                        <p>
+                            Création et développement de mon portfolio
+                            personnel afin de présenter mon parcours,
+                            mes compétences et mes projets.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JAVASCRIPT</span>
+                        </div>
+
                     </div>
 
                 </article>
 
 
-                <article class="project">
+                <article class="project-card reveal">
 
-                    <div class="project-header">
-                        <span>PROJECT_02</span>
-                        <b>EN COURS</b>
+                    <div class="project-mini">
+                        <span>MISSION_002</span>
+                        <strong>+</strong>
                     </div>
 
-                    <div class="project-number">
-                        02
-                    </div>
+                    <div class="project-content">
 
-                    <h3>Projet informatique</h3>
+                        <div class="project-status upcoming">
+                            À VENIR
+                        </div>
 
-                    <p>
-                        Présentation d'un projet actuellement
-                        en préparation.
-                    </p>
+                        <h3>PROJET #02</h3>
 
-                    <div class="project-footer">
-                        <span>SLAM</span>
-                        <span>→</span>
+                        <p>
+                            Un futur projet réalisé dans le cadre
+                            de ma formation BTS SIO.
+                        </p>
+
                     </div>
 
                 </article>
 
 
-                <article class="project">
+                <article class="project-card reveal">
 
-                    <div class="project-header">
-                        <span>PROJECT_03</span>
-                        <b>À VENIR</b>
+                    <div class="project-mini">
+                        <span>MISSION_003</span>
+                        <strong>+</strong>
                     </div>
 
-                    <div class="project-number">
-                        03
-                    </div>
+                    <div class="project-content">
 
-                    <h3>Nouveau projet</h3>
+                        <div class="project-status upcoming">
+                            À VENIR
+                        </div>
 
-                    <p>
-                        Cet emplacement pourra accueillir
-                        un prochain projet.
-                    </p>
+                        <h3>PROJET #03</h3>
 
-                    <div class="project-footer">
-                        <span>COMING SOON</span>
-                        <span>→</span>
+                        <p>
+                            Espace réservé à un prochain projet
+                            ou une réalisation personnelle.
+                        </p>
+
                     </div>
 
                 </article>
@@ -507,50 +573,32 @@
         </section>
 
 
-        <!-- ================= CONTACT ================= -->
+        <!-- CONTACT -->
+        <section id="contact" class="section contact-section dark-section">
 
-        <section id="contact" class="section">
+            <div class="contact-box reveal">
 
-            <div class="section-heading">
-
-                <div class="section-number">
-                    05
+                <div class="contact-crosshair">
+                    +
                 </div>
 
-                <div>
-                    <p>// CONTACT</p>
-                    <h2>CONTACT</h2>
-                </div>
+                <span class="section-kicker">// COMMUNICATION</span>
 
-            </div>
+                <h2>CONTACT<span>.</span></h2>
 
+                <p>
+                    Une question, une opportunité ou simplement envie
+                    d'échanger ?
+                </p>
 
-            <div class="contact-box">
-
-                <div>
-
-                    <span class="contact-tag">
-                        // GET IN TOUCH
-                    </span>
-
-                    <h3>
-                        UNE QUESTION ?<br>
-                        <span>ÉCRIVEZ-MOI.</span>
-                    </h3>
-
-                    <p>
-                        Vous pouvez me contacter pour échanger
-                        à propos de mon parcours, de mes projets
-                        ou de ma formation.
-                    </p>
-
-                </div>
-
-
-                <a href="mailto:contact@example.com" class="contact-button">
-                    ME CONTACTER
-                    <span>→</span>
+                <a href="mailto:" class="cs-button primary contact-button">
+                    <span>ME CONTACTER</span>
+                    <b>→</b>
                 </a>
+
+                <div class="contact-code">
+                    STATUS: <strong>READY</strong>
+                </div>
 
             </div>
 
@@ -559,21 +607,21 @@
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer>
 
-        <div class="footer-logo">
-            FABJO<span>.</span>
+        <div class="footer-left">
+            <span class="orange">◆</span>
+            FABJO LAMI
         </div>
 
-        <p>
-            PORTFOLIO — BTS SIO — 2026
-        </p>
+        <div>
+            BTS SIO — SLAM
+        </div>
 
-        <a href="#accueil">
-            ↑ RETOUR EN HAUT
-        </a>
+        <div>
+            © 2026
+        </div>
 
     </footer>
 
