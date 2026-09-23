@@ -131,16 +131,18 @@ button {
 
 .cursor::before {
     width: 1px;
-    height: 8px;
-    top: -9px;
+    height: 38px;
+    top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .cursor::after {
     height: 1px;
-    width: 8px;
-    left: -9px;
+    width: 38px;
+    left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .cursor-dot {
