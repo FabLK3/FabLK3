@@ -1,99 +1,122 @@
+/* =========================================================
+   PORTFOLIO JS
+========================================================= */
+
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
-       CURSEUR CROSSHAIR
+       ANNÉE DU FOOTER
     ===================================================== */
 
-    const cursorDot = document.querySelector(".cursor-dot");
-    const cursorRing = document.querySelector(".cursor-ring");
+    const footerYear = document.getElementById("footer-year");
 
-    let mouseX = 0;
-    let mouseY = 0;
-
-    let ringX = 0;
-    let ringY = 0;
-
-
-    document.addEventListener("mousemove", (event) => {
-
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-
-        if (cursorDot) {
-            cursorDot.style.left = `${mouseX}px`;
-            cursorDot.style.top = `${mouseY}px`;
-        }
-
-    });
-
-
-    function updateCursor() {
-
-        ringX += (mouseX - ringX) * 0.14;
-        ringY += (mouseY - ringY) * 0.14;
-
-        if (cursorRing) {
-            cursorRing.style.left = `${ringX}px`;
-            cursorRing.style.top = `${ringY}px`;
-        }
-
-        requestAnimationFrame(updateCursor);
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
     }
 
-    updateCursor();
-
 
     /* =====================================================
-       CURSEUR AU SURVOL
+       MENU MOBILE
     ===================================================== */
 
-    const interactiveElements = document.querySelectorAll(
-        "a, .skill-card, .project-card, .profile-panel, .stage-panel"
-    );
+    const menuButton = document.querySelector(".menu-button");
+    const navigation = document.querySelector(".navigation");
+    const navLinks = document.querySelectorAll(".nav-link");
 
+    if (menuButton && navigation) {
 
-    interactiveElements.forEach((element) => {
-
-        element.addEventListener("mouseenter", () => {
-
-            if (cursorRing) {
-                cursorRing.classList.add("hover");
-            }
-
+        menuButton.addEventListener("click", () => {
+            navigation.classList.toggle("open");
         });
 
+        navLinks.forEach((link) => {
 
-        element.addEventListener("mouseleave", () => {
-
-            if (cursorRing) {
-                cursorRing.classList.remove("hover");
-            }
+            link.addEventListener("click", () => {
+                navigation.classList.remove("open");
+            });
 
         });
-
-    });
+    }
 
 
     /* =====================================================
-       ANIMATION DES ÉLÉMENTS AU SCROLL
+       CURSEUR PERSONNALISÉ
+    ===================================================== */
+
+    const cursor = document.querySelector(".cursor");
+    const cursorDot = document.querySelector(".cursor-dot");
+
+    const hasFinePointer =
+        window.matchMedia("(pointer: fine)").matches;
+
+    if (hasFinePointer && cursor && cursorDot) {
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        let cursorX = 0;
+        let cursorY = 0;
+
+        document.addEventListener("mousemove", (event) => {
+
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
+
+        });
+
+        function animateCursor() {
+
+            cursorX += (mouseX - cursorX) * 0.18;
+            cursorY += (mouseY - cursorY) * 0.18;
+
+            cursor.style.left = `${cursorX}px`;
+            cursor.style.top = `${cursorY}px`;
+
+            requestAnimationFrame(animateCursor);
+        }
+
+        animateCursor();
+
+
+        const interactiveElements = document.querySelectorAll(
+            "a, button, .skill-card, .timeline-content, .hud-card"
+        );
+
+        interactiveElements.forEach((element) => {
+
+            element.addEventListener("mouseenter", () => {
+                cursor.classList.add("hover");
+            });
+
+            element.addEventListener("mouseleave", () => {
+                cursor.classList.remove("hover");
+            });
+
+        });
+    }
+
+
+    /* =====================================================
+       ANIMATION AU SCROLL
     ===================================================== */
 
     const revealElements = document.querySelectorAll(".reveal");
 
-
     const revealObserver = new IntersectionObserver(
-        (entries) => {
+        (entries, observer) => {
 
             entries.forEach((entry) => {
 
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    revealObserver.unobserve(entry.target);
-
+                if (!entry.isIntersecting) {
+                    return;
                 }
 
+                entry.target.classList.add("visible");
+
+                observer.unobserve(entry.target);
             });
 
         },
@@ -102,19 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
-
     revealElements.forEach((element) => {
         revealObserver.observe(element);
     });
 
 
     /* =====================================================
-       MENU ACTIF
+       NAVIGATION ACTIVE
     ===================================================== */
 
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-link");
-
+    const sections = document.querySelectorAll("main section[id]");
 
     const sectionObserver = new IntersectionObserver(
         (entries) => {
@@ -125,29 +145,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
+                const currentId = entry.target.id;
 
                 navLinks.forEach((link) => {
-                    link.classList.remove("active");
+
+                    const linkTarget = link.getAttribute("href");
+
+                    link.classList.toggle(
+                        "active",
+                        linkTarget === `#${currentId}`
+                    );
+
                 });
-
-
-                const activeLink = document.querySelector(
-                    `.nav-link[href="#${entry.target.id}"]`
-                );
-
-
-                if (activeLink) {
-                    activeLink.classList.add("active");
-                }
 
             });
 
         },
         {
-            rootMargin: "-35% 0px -55% 0px"
+            rootMargin: "-35% 0px -55% 0px",
+            threshold: 0
         }
     );
-
 
     sections.forEach((section) => {
         sectionObserver.observe(section);
@@ -155,127 +173,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       SCROLL FLUIDE DU MENU
+       FERMETURE DU MENU SI ON CLIQUE EN DEHORS
     ===================================================== */
 
-    navLinks.forEach((link) => {
+    document.addEventListener("click", (event) => {
 
-        link.addEventListener("click", (event) => {
-
-            const targetId = link.getAttribute("href");
-
-
-            if (!targetId || !targetId.startsWith("#")) {
-                return;
-            }
-
-
-            const target = document.querySelector(targetId);
-
-
-            if (!target) {
-                return;
-            }
-
-
-            event.preventDefault();
-
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        });
-
-    });
-
-
-    /* =====================================================
-       PARALLAX DU CROSSHAIR
-    ===================================================== */
-
-    const heroCrosshair = document.querySelector(".hero-crosshair");
-
-
-    document.addEventListener("mousemove", (event) => {
-
-        if (!heroCrosshair) {
+        if (!navigation || !menuButton) {
             return;
         }
 
+        const clickedInsideMenu =
+            navigation.contains(event.target);
 
-        const mousePercentX =
-            event.clientX / window.innerWidth - 0.5;
+        const clickedButton =
+            menuButton.contains(event.target);
 
-        const mousePercentY =
-            event.clientY / window.innerHeight - 0.5;
-
-
-        const movementX = mousePercentX * 18;
-        const movementY = mousePercentY * 18;
-
-
-        heroCrosshair.style.marginLeft = `${movementX}px`;
-        heroCrosshair.style.marginTop = `${movementY}px`;
-
-    });
-
-
-    /* =====================================================
-       PETIT EFFET DE MOUVEMENT SUR LES CARTES
-    ===================================================== */
-
-    const cards = document.querySelectorAll(
-        ".skill-card, .project-card"
-    );
-
-
-    cards.forEach((card) => {
-
-        card.addEventListener("mousemove", (event) => {
-
-            if (window.innerWidth <= 850) {
-                return;
-            }
-
-
-            const rect = card.getBoundingClientRect();
-
-            const x =
-                (event.clientX - rect.left) / rect.width - 0.5;
-
-            const y =
-                (event.clientY - rect.top) / rect.height - 0.5;
-
-
-            const rotateX = y * -3;
-            const rotateY = x * 3;
-
-
-            card.style.transform =
-                `translateY(-7px) perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-        });
-
-
-        card.addEventListener("mouseleave", () => {
-
-            card.style.transform = "";
-
-        });
+        if (
+            navigation.classList.contains("open") &&
+            !clickedInsideMenu &&
+            !clickedButton
+        ) {
+            navigation.classList.remove("open");
+        }
 
     });
 
 
     /* =====================================================
-       DATE / ANNÉE DU FOOTER
+       EMPÊCHER LES LIENS VIDES DE FAIRE N'IMPORTE QUOI
     ===================================================== */
 
-    const footerYear = document.querySelector(".footer-year");
+    document.querySelectorAll('a[href="#"]').forEach((link) => {
 
-    if (footerYear) {
-        footerYear.textContent = new Date().getFullYear();
-    }
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+        });
+
+    });
 
 });
