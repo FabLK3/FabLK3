@@ -3,50 +3,53 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
     link.addEventListener("click", function (event) {
 
-        const target = document.querySelector(this.getAttribute("href"));
+        const targetId = this.getAttribute("href");
+        const target = document.querySelector(targetId);
 
-        if (target) {
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+        if (!target) {
+            return;
         }
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
 
     });
 
 });
 
 
-// Petit effet sur le menu selon la section affichée
-const sections = document.querySelectorAll("section");
+// Détection de la section actuellement visible
+const sections = document.querySelectorAll("main section");
 const menuLinks = document.querySelectorAll(".menu a");
 
 const observer = new IntersectionObserver(function (entries) {
 
     entries.forEach(function (entry) {
 
-        if (entry.isIntersecting) {
+        if (!entry.isIntersecting) {
+            return;
+        }
 
-            menuLinks.forEach(function (link) {
-                link.classList.remove("active");
-            });
+        menuLinks.forEach(function (link) {
+            link.classList.remove("active");
+        });
 
-            const activeLink = document.querySelector(
-                '.menu a[href="#' + entry.target.id + '"]'
-            );
+        const activeLink = document.querySelector(
+            '.menu a[href="#' + entry.target.id + '"]'
+        );
 
-            if (activeLink) {
-                activeLink.classList.add("active");
-            }
-
+        if (activeLink) {
+            activeLink.classList.add("active");
         }
 
     });
 
 }, {
-    threshold: 0.35
+    rootMargin: "-35% 0px -55% 0px"
 });
 
 
@@ -55,5 +58,4 @@ sections.forEach(function (section) {
 });
 
 
-// Message dans la console
 console.log("Portfolio BTS SIO chargé.");
