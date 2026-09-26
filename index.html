@@ -2,11 +2,15 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Portfolio de Fabjo Lami — Étudiant BTS SIO SLAM"
+        content="Portfolio de Fabjo Lami — Étudiant en BTS SIO SLAM au CNED, orienté développement informatique et jeux vidéo."
     >
 
     <title>Fabjo Lami — Portfolio</title>
@@ -31,70 +35,210 @@
 
 <body>
 
-    <!-- Curseur -->
+    <!-- ========================= -->
+    <!-- ÉLÉMENTS DE FOND -->
+    <!-- ========================= -->
+
+    <div class="background-effects" aria-hidden="true">
+
+        <div class="background-grid"></div>
+
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+        <div class="background-glow glow-three"></div>
+
+        <div class="background-line line-one"></div>
+        <div class="background-line line-two"></div>
+
+        <div class="background-cross cross-one">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="background-cross cross-two">
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- CURSEUR PERSONNALISÉ -->
+    <!-- ========================= -->
+
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
 
-    <div class="ambient-background" aria-hidden="true">
-        <span class="ambient-grid"></span>
-        <span class="ambient-glow glow-one"></span>
-        <span class="ambient-glow glow-two"></span>
-        <span class="ambient-line line-one"></span>
-        <span class="ambient-line line-two"></span>
-        <span class="ambient-scan"></span>
-    </div>
 
-    <!-- HEADER -->
+    <!-- ========================= -->
+    <!-- HEADER / MENU GAUCHE -->
+    <!-- ========================= -->
+
     <header class="site-header">
 
         <div class="header-inner">
 
+            <!-- Identité -->
             <a href="#accueil" class="brand">
-                <span class="brand-mark">FL</span>
+
+                <span class="brand-mark">
+                    FL
+                </span>
 
                 <span class="brand-text">
-                    <strong>FABJO LAMI</strong>
-                    <small>PORTFOLIO // BTS SIO</small>
+
+                    <strong>
+                        FABJO LAMI
+                    </strong>
+
+                    <small>
+                        PORTFOLIO // BTS SIO
+                    </small>
+
                 </span>
+
             </a>
 
-            <nav class="navigation" aria-label="Navigation principale">
 
-                <a href="#accueil" class="nav-link active">
+            <!-- Petit statut -->
+            <div class="header-status">
+
+                <span class="header-status-dot"></span>
+
+                <span>
+                    PORTFOLIO EN LIGNE
+                </span>
+
+            </div>
+
+
+            <!-- Bouton mobile -->
+            <button
+                class="menu-button"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <!-- Navigation -->
+            <nav
+                class="navigation"
+                aria-label="Navigation principale"
+            >
+
+                <a
+                    href="#accueil"
+                    class="nav-link active"
+                >
                     <span>01</span>
-                    Accueil
+
+                    <div>
+                        <strong>Accueil</strong>
+                        <small>Présentation</small>
+                    </div>
                 </a>
 
-                <a href="#apropos" class="nav-link">
+
+                <a
+                    href="#apropos"
+                    class="nav-link"
+                >
                     <span>02</span>
-                    À propos
+
+                    <div>
+                        <strong>À propos</strong>
+                        <small>Mon profil</small>
+                    </div>
                 </a>
 
-                <a href="#parcours" class="nav-link">
+
+                <a
+                    href="#parcours"
+                    class="nav-link"
+                >
                     <span>03</span>
-                    Parcours
+
+                    <div>
+                        <strong>Parcours</strong>
+                        <small>Mon évolution</small>
+                    </div>
                 </a>
 
-                <a href="#competences" class="nav-link">
+
+                <a
+                    href="#competences"
+                    class="nav-link"
+                >
                     <span>04</span>
-                    Compétences
+
+                    <div>
+                        <strong>Compétences</strong>
+                        <small>Technologies</small>
+                    </div>
                 </a>
 
-                <a href="#projets" class="nav-link">
+
+                <a
+                    href="#projets"
+                    class="nav-link"
+                >
                     <span>05</span>
-                    Projets
+
+                    <div>
+                        <strong>Projets</strong>
+                        <small>À venir</small>
+                    </div>
                 </a>
 
-                <a href="#contact" class="nav-link">
+
+                <a
+                    href="#contact"
+                    class="nav-link"
+                >
                     <span>06</span>
-                    Contact
+
+                    <div>
+                        <strong>Contact</strong>
+                        <small>Me joindre</small>
+                    </div>
                 </a>
 
             </nav>
 
-            <div class="sidebar-bottom">
-                <div class="sidebar-status"><span></span> PORTFOLIO ACTIF</div>
-                <div class="sidebar-location">ROANNE · FRANCE</div>
+
+            <!-- Informations bas menu -->
+            <div class="header-bottom">
+
+                <div class="header-location">
+
+                    <span>
+                        LOCALISATION
+                    </span>
+
+                    <strong>
+                        ROANNE
+                    </strong>
+
+                </div>
+
+                <div class="header-course">
+
+                    <span>
+                        FORMATION
+                    </span>
+
+                    <strong>
+                        BTS SIO // SLAM
+                    </strong>
+
+                </div>
+
             </div>
 
         </div>
@@ -102,19 +246,10 @@
     </header>
 
 
-    <button
-        class="menu-button"
-        type="button"
-        aria-label="Ouvrir le menu"
-        aria-expanded="false"
-    >
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-
+    <!-- ========================= -->
     <!-- BOUTON RETOUR EN HAUT -->
+    <!-- ========================= -->
+
     <a
         href="#accueil"
         class="back-to-top"
@@ -124,16 +259,26 @@
     </a>
 
 
+    <!-- ========================= -->
+    <!-- CONTENU PRINCIPAL -->
+    <!-- ========================= -->
+
     <main>
+
 
         <!-- ========================= -->
         <!-- ACCUEIL -->
         <!-- ========================= -->
 
-        <section id="accueil" class="hero section">
+        <section
+            id="accueil"
+            class="hero section"
+        >
 
             <div class="hero-grid">
 
+
+                <!-- Texte principal -->
                 <div class="hero-content reveal">
 
                     <div class="section-code">
@@ -152,70 +297,233 @@
                     <p class="hero-description">
                         Étudiant en première année de BTS SIO option SLAM,
                         actuellement en formation à distance avec le CNED.
-                        Je développe progressivement mes compétences en programmation
-                        avec l'objectif de m'orienter vers le développement de jeux vidéo.
                     </p>
 
-                    <div class="hero-meta">
-                        <div><small>LOCALISATION</small><strong>ROANNE</strong></div>
-                        <div><small>FORMATION</small><strong>BTS SIO · SLAM</strong></div>
-                        <div><small>OBJECTIF</small><strong>JEU VIDÉO</strong></div>
-                    </div>
+                    <p class="hero-description hero-description-secondary">
+                        Je développe progressivement mes compétences
+                        en programmation avec l'objectif de me spécialiser
+                        plus tard dans le développement de jeux vidéo.
+                    </p>
 
+
+                    <!-- Boutons -->
                     <div class="hero-actions">
 
-                        <a href="#apropos" class="button button-primary">
+                        <a
+                            href="#apropos"
+                            class="button button-primary"
+                        >
                             Découvrir mon parcours
                             <span>→</span>
                         </a>
 
-                        <a href="#contact" class="button button-secondary">
+                        <a
+                            href="#contact"
+                            class="button button-secondary"
+                        >
                             Me contacter
                         </a>
+
+                    </div>
+
+
+                    <!-- Informations rapides -->
+                    <div class="hero-quick-info">
+
+                        <div class="quick-info-item">
+
+                            <span>
+                                FORMATION
+                            </span>
+
+                            <strong>
+                                BTS SIO SLAM
+                            </strong>
+
+                        </div>
+
+                        <div class="quick-info-item">
+
+                            <span>
+                                ÉTABLISSEMENT
+                            </span>
+
+                            <strong>
+                                CNED
+                            </strong>
+
+                        </div>
+
+                        <div class="quick-info-item">
+
+                            <span>
+                                VILLE
+                            </span>
+
+                            <strong>
+                                ROANNE
+                            </strong>
+
+                        </div>
+
+                        <div class="quick-info-item">
+
+                            <span>
+                                OBJECTIF
+                            </span>
+
+                            <strong>
+                                JEU VIDÉO
+                            </strong>
+
+                        </div>
 
                     </div>
 
                 </div>
 
 
+                <!-- Carte profil -->
                 <div class="hero-panel reveal">
 
                     <div class="hud-card">
 
                         <div class="hud-top">
-                            <span>PROFILE</span>
-                            <span>ONLINE</span>
+
+                            <span>
+                                PROFILE // 001
+                            </span>
+
+                            <span class="online-status">
+                                ONLINE
+                            </span>
+
                         </div>
 
                         <div class="hud-line"></div>
 
-                        <div class="profile-symbol">
-                            FL
+
+                        <div class="profile-top">
+
+                            <div class="profile-symbol">
+                                FL
+                            </div>
+
+                            <div class="profile-main-info">
+
+                                <span>
+                                    ÉTUDIANT
+                                </span>
+
+                                <strong>
+                                    FABJO LAMI
+                                </strong>
+
+                                <small>
+                                    BTS SIO — SLAM
+                                </small>
+
+                            </div>
+
                         </div>
+
 
                         <div class="hud-info">
 
                             <div>
-                                <span>NOM</span>
-                                <strong>FABJO LAMI</strong>
+
+                                <span>
+                                    NOM
+                                </span>
+
+                                <strong>
+                                    FABJO LAMI
+                                </strong>
+
                             </div>
 
-                            <div>
-                                <span>FORMATION</span>
-                                <strong>BTS SIO — SLAM</strong>
-                            </div>
 
                             <div>
-                                <span>ÉTABLISSEMENT</span>
-                                <strong>CNED</strong>
+
+                                <span>
+                                    FORMATION
+                                </span>
+
+                                <strong>
+                                    BTS SIO — SLAM
+                                </strong>
+
                             </div>
 
+
                             <div>
-                                <span>OBJECTIF</span>
-                                <strong>DÉVELOPPEMENT DE JEUX VIDÉO</strong>
+
+                                <span>
+                                    ÉTABLISSEMENT
+                                </span>
+
+                                <strong>
+                                    CNED
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    LOCALISATION
+                                </span>
+
+                                <strong>
+                                    ROANNE
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    OBJECTIF
+                                </span>
+
+                                <strong>
+                                    DÉVELOPPEMENT DE JEUX VIDÉO
+                                </strong>
+
                             </div>
 
                         </div>
+
+
+                        <div class="hud-footer">
+
+                            <span>
+                                PROFIL EN CONSTRUCTION
+                            </span>
+
+                            <span>
+                                2026
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Petit bloc sous le HUD -->
+                    <div class="hero-side-card">
+
+                        <span class="card-label">
+                            OBJECTIF ACTUEL
+                        </span>
+
+                        <p>
+                            Consolider mes bases en développement,
+                            réaliser mes premiers projets et préparer
+                            mon futur stage.
+                        </p>
 
                     </div>
 
@@ -226,60 +534,146 @@
         </section>
 
 
+
         <!-- ========================= -->
         <!-- À PROPOS -->
         <!-- ========================= -->
 
-        <section id="apropos" class="section">
+        <section
+            id="apropos"
+            class="section"
+        >
 
             <div class="section-header reveal">
 
                 <div>
-                    <span class="section-number">02</span>
-                    <span class="section-code">// À PROPOS</span>
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <span class="section-code">
+                        // À PROPOS
+                    </span>
+
                 </div>
 
                 <h2>
                     MON
-                    <span>PARCOURS</span>
+                    <span>PROFIL</span>
                 </h2>
+
+                <p class="section-introduction">
+                    Mon parcours n'a pas été totalement linéaire,
+                    mais chaque expérience m'a permis de progresser
+                    et de préciser mon projet professionnel.
+                </p>
 
             </div>
 
 
             <div class="about-grid">
 
+
+                <!-- Présentation -->
                 <div class="about-text panel reveal">
+
+                    <div class="card-top-line">
+
+                        <span class="card-label">
+                            PRÉSENTATION
+                        </span>
+
+                        <span class="card-reference">
+                            PROFILE_02
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Un nouveau départ
+                        <span>vers l'informatique.</span>
+                    </h3>
+
 
                     <p>
                         Après l'obtention de mon baccalauréat
-                        <strong>Sciences et Technologies du Management et de la Gestion (STMG)</strong>
+                        <strong>
+                            Sciences et Technologies du Management et de la Gestion (STMG)
+                        </strong>
                         en juin 2024, j'ai arrêté mes études pendant deux ans afin de travailler
                         dans le BTP et la rénovation avec mon père.
                     </p>
 
                     <p>
-                        Cette expérience m'a permis de développer mon autonomie,
-                        mon organisation et mon sens des responsabilités.
+                        Cette expérience m'a permis de développer mon
+                        <strong>autonomie</strong>,
+                        mon <strong>organisation</strong>
+                        et mon <strong>sens des responsabilités</strong>.
                     </p>
 
                     <p>
                         Je reprends aujourd'hui mes études en première année de
-                        <strong>BTS SIO SLAM</strong> avec le CNED afin de me spécialiser
-                        progressivement dans le développement informatique et,
-                        à terme, dans le développement de jeux vidéo.
+                        <strong>BTS SIO SLAM</strong>
+                        avec le CNED afin de me spécialiser progressivement
+                        dans le développement informatique et, à terme,
+                        dans le développement de jeux vidéo.
                     </p>
 
-                    <div class="about-highlight">
-                        <span>OBJECTIF</span>
-                        <strong>Construire une expérience solide en développement,
-                        puis évoluer vers le domaine du jeu vidéo.</strong>
+
+                    <div class="about-objectives">
+
+                        <div>
+
+                            <span>
+                                01
+                            </span>
+
+                            <p>
+                                Développer mes compétences
+                                en programmation.
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                02
+                            </span>
+
+                            <p>
+                                Construire des projets
+                                personnels et scolaires.
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                03
+                            </span>
+
+                            <p>
+                                Me spécialiser progressivement
+                                dans le jeu vidéo.
+                            </p>
+
+                        </div>
+
                     </div>
 
                 </div>
 
 
+                <!-- Stage -->
                 <div class="internship-card panel reveal">
+
+                    <div class="internship-decoration">
+                        STAGE
+                    </div>
 
                     <div class="card-label">
                         RECHERCHE
@@ -294,17 +688,75 @@
                         Je recherche un stage de
                         <strong>4 à 5 semaines</strong>
                         dans le domaine du développement entre
-                        avril et juillet 2027.
+                        <strong>avril et juillet 2027</strong>.
                     </p>
 
-                    <div class="internship-location">
-                        <span>ZONE DE RECHERCHE</span>
-                        <strong>ROANNE</strong>
+
+                    <div class="internship-information">
+
+                        <div>
+
+                            <span>
+                                DURÉE
+                            </span>
+
+                            <strong>
+                                4 À 5 SEMAINES
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PÉRIODE
+                            </span>
+
+                            <strong>
+                                AVRIL → JUILLET 2027
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                SECTEUR
+                            </span>
+
+                            <strong>
+                                DÉVELOPPEMENT
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                LOCALISATION
+                            </span>
+
+                            <strong class="orange-text">
+                                ROANNE
+                            </strong>
+
+                        </div>
+
                     </div>
 
+
                     <span class="status status-upcoming">
-                        À VENIR
+                        RECHERCHE EN COURS
                     </span>
+
+
+                    <a
+                        href="#contact"
+                        class="internship-contact-link"
+                    >
+                        Me contacter pour un stage
+                        <span>→</span>
+                    </a>
 
                 </div>
 
@@ -313,23 +765,39 @@
         </section>
 
 
+
         <!-- ========================= -->
         <!-- PARCOURS -->
         <!-- ========================= -->
 
-        <section id="parcours" class="section">
+        <section
+            id="parcours"
+            class="section"
+        >
 
             <div class="section-header reveal">
 
                 <div>
-                    <span class="section-number">03</span>
-                    <span class="section-code">// PARCOURS</span>
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <span class="section-code">
+                        // PARCOURS
+                    </span>
+
                 </div>
 
                 <h2>
                     MON
                     <span>ÉVOLUTION</span>
                 </h2>
+
+                <p class="section-introduction">
+                    De mon baccalauréat à ma reprise d'études,
+                    voici les principales étapes de mon parcours.
+                </p>
 
             </div>
 
@@ -338,20 +806,28 @@
 
 
                 <!-- 2024 -->
-
                 <article class="timeline-item reveal">
 
                     <div class="timeline-date">
-                        JUIN<br>2024
+                        JUIN<br>
+                        2024
                     </div>
 
                     <div class="timeline-marker"></div>
 
                     <div class="timeline-content">
 
-                        <span class="timeline-status completed">
-                            TERMINÉ
-                        </span>
+                        <div class="timeline-top">
+
+                            <span class="timeline-status completed">
+                                TERMINÉ
+                            </span>
+
+                            <span class="timeline-reference">
+                                STEP_01
+                            </span>
+
+                        </div>
 
                         <h3>
                             Baccalauréat STMG
@@ -359,7 +835,8 @@
 
                         <p>
                             Obtention du baccalauréat
-                            Sciences et Technologies du Management et de la Gestion (STMG).
+                            Sciences et Technologies du Management
+                            et de la Gestion (STMG).
                         </p>
 
                         <small>
@@ -372,29 +849,38 @@
                 </article>
 
 
-                <!-- BTP -->
 
+                <!-- BTP -->
                 <article class="timeline-item reveal">
 
                     <div class="timeline-date">
-                        SEPT. 2024<br>→ SEPT. 2025
+                        SEPT. 2024<br>
+                        → SEPT. 2025
                     </div>
 
                     <div class="timeline-marker"></div>
 
                     <div class="timeline-content">
 
-                        <span class="timeline-status completed">
-                            TERMINÉ
-                        </span>
+                        <div class="timeline-top">
+
+                            <span class="timeline-status completed">
+                                TERMINÉ
+                            </span>
+
+                            <span class="timeline-reference">
+                                STEP_02
+                            </span>
+
+                        </div>
 
                         <h3>
                             BTP & rénovation
                         </h3>
 
                         <p>
-                            Une année de travail dans le BTP et la rénovation
-                            avec mon père.
+                            Une année de travail dans le BTP
+                            et la rénovation avec mon père.
                         </p>
 
                         <small>
@@ -407,21 +893,30 @@
                 </article>
 
 
-                <!-- Chronopost -->
 
+                <!-- Chronopost -->
                 <article class="timeline-item reveal">
 
                     <div class="timeline-date">
-                        OCT. → DÉC.<br>2025
+                        OCT. → DÉC.<br>
+                        2025
                     </div>
 
                     <div class="timeline-marker"></div>
 
                     <div class="timeline-content">
 
-                        <span class="timeline-status completed">
-                            TERMINÉ
-                        </span>
+                        <div class="timeline-top">
+
+                            <span class="timeline-status completed">
+                                TERMINÉ
+                            </span>
+
+                            <span class="timeline-reference">
+                                STEP_03
+                            </span>
+
+                        </div>
 
                         <h3>
                             RAS Intérim — Chronopost
@@ -434,7 +929,8 @@
 
                         <small>
                             Une expérience qui m'a permis de développer
-                            ma rigueur, mon rythme de travail et mon esprit d'équipe.
+                            ma rigueur, mon rythme de travail
+                            et mon esprit d'équipe.
                         </small>
 
                     </div>
@@ -442,21 +938,30 @@
                 </article>
 
 
-                <!-- Leclerc -->
 
+                <!-- Leclerc -->
                 <article class="timeline-item reveal">
 
                     <div class="timeline-date">
-                        MARS<br>2026
+                        MARS<br>
+                        2026
                     </div>
 
                     <div class="timeline-marker"></div>
 
                     <div class="timeline-content">
 
-                        <span class="timeline-status completed">
-                            TERMINÉ
-                        </span>
+                        <div class="timeline-top">
+
+                            <span class="timeline-status completed">
+                                TERMINÉ
+                            </span>
+
+                            <span class="timeline-reference">
+                                STEP_04
+                            </span>
+
+                        </div>
 
                         <h3>
                             Inventoriste — Leclerc
@@ -477,21 +982,30 @@
                 </article>
 
 
-                <!-- BTS -->
 
-                <article class="timeline-item reveal">
+                <!-- BTS -->
+                <article class="timeline-item timeline-current reveal">
 
                     <div class="timeline-date">
-                        SEPT. 2026<br>→ ACTUEL
+                        SEPT. 2026<br>
+                        → ACTUEL
                     </div>
 
                     <div class="timeline-marker current"></div>
 
                     <div class="timeline-content">
 
-                        <span class="timeline-status current">
-                            EN COURS
-                        </span>
+                        <div class="timeline-top">
+
+                            <span class="timeline-status current">
+                                EN COURS
+                            </span>
+
+                            <span class="timeline-reference">
+                                STEP_05
+                            </span>
+
+                        </div>
 
                         <h3>
                             BTS SIO — SLAM
@@ -499,7 +1013,8 @@
 
                         <p>
                             Première année de BTS Services Informatiques
-                            aux Organisations, option SLAM, avec le CNED.
+                            aux Organisations, option SLAM,
+                            avec le CNED.
                         </p>
 
                         <small>
@@ -513,59 +1028,91 @@
                 </article>
 
 
-                <!-- Stage -->
 
+                <!-- Stage -->
                 <article class="timeline-item reveal">
 
                     <div class="timeline-date">
-                        AVRIL → JUIL.<br>2027
+                        AVRIL → JUIL.<br>
+                        2027
                     </div>
 
                     <div class="timeline-marker upcoming"></div>
 
                     <div class="timeline-content">
 
-                        <span class="timeline-status upcoming">
-                            À VENIR
-                        </span>
+                        <div class="timeline-top">
+
+                            <span class="timeline-status upcoming">
+                                À VENIR
+                            </span>
+
+                            <span class="timeline-reference">
+                                STEP_06
+                            </span>
+
+                        </div>
 
                         <h3>
                             Stage en développement
                         </h3>
 
                         <p>
-                            Stage de 4 à 5 semaines dans le domaine
-                            du développement.
+                            Stage de 4 à 5 semaines
+                            dans le domaine du développement.
                         </p>
+
+                        <small>
+                            L'objectif sera de découvrir
+                            le fonctionnement d'un environnement professionnel
+                            dans le développement et de mettre
+                            en pratique mes connaissances.
+                        </small>
 
                     </div>
 
                 </article>
 
 
-                <!-- BTS 2 -->
 
+                <!-- BTS 2 -->
                 <article class="timeline-item reveal">
 
                     <div class="timeline-date">
-                        SEPT.<br>2027
+                        SEPT.<br>
+                        2027
                     </div>
 
                     <div class="timeline-marker upcoming"></div>
 
                     <div class="timeline-content">
 
-                        <span class="timeline-status upcoming">
-                            À VENIR
-                        </span>
+                        <div class="timeline-top">
+
+                            <span class="timeline-status upcoming">
+                                À VENIR
+                            </span>
+
+                            <span class="timeline-reference">
+                                STEP_07
+                            </span>
+
+                        </div>
 
                         <h3>
                             Deuxième année BTS SIO — SLAM
                         </h3>
 
                         <p>
-                            Poursuite du BTS SIO SLAM avec le CNED.
+                            Poursuite du BTS SIO SLAM
+                            avec le CNED.
                         </p>
+
+                        <small>
+                            Une nouvelle étape pour continuer
+                            à progresser en développement
+                            et préparer la suite de mon parcours.
+                        </small>
 
                     </div>
 
@@ -576,23 +1123,40 @@
         </section>
 
 
+
         <!-- ========================= -->
         <!-- COMPÉTENCES -->
         <!-- ========================= -->
 
-        <section id="competences" class="section">
+        <section
+            id="competences"
+            class="section"
+        >
 
             <div class="section-header reveal">
 
                 <div>
-                    <span class="section-number">04</span>
-                    <span class="section-code">// COMPÉTENCES</span>
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <span class="section-code">
+                        // COMPÉTENCES
+                    </span>
+
                 </div>
 
                 <h2>
                     MES
                     <span>COMPÉTENCES</span>
                 </h2>
+
+                <p class="section-introduction">
+                    Je suis encore au début de ma formation.
+                    Ces compétences sont donc en cours d'acquisition
+                    et évolueront progressivement avec mes projets.
+                </p>
 
             </div>
 
@@ -601,24 +1165,21 @@
 
 
                 <!-- Développement -->
-
-                <div class="skills-panel panel reveal">
+                <div class="skills-panel skills-panel-main panel reveal">
 
                     <div class="skills-panel-header">
 
                         <div>
+
                             <span class="card-label">
-                                DOMAINE
+                                DOMAINE PRINCIPAL
                             </span>
 
                             <h3>
                                 Développement d'applications
-                                / jeux vidéo
+                                <span>/ jeux vidéo</span>
                             </h3>
-                            <p class="skills-description">
-                                Technologies étudiées ou en cours d'apprentissage,
-                                avec une progression construite autour de la pratique.
-                            </p>
+
                         </div>
 
                         <span class="acquisition">
@@ -628,64 +1189,173 @@
                     </div>
 
 
+                    <p class="skills-description">
+                        Mon objectif actuel est de construire
+                        de bonnes bases en programmation,
+                        en développement web et progressivement
+                        en développement de jeux vidéo.
+                    </p>
+
+
                     <div class="skills-logos">
 
-                        <div class="skill-logo" title="Python">
 
-                            <i class="devicon-python-plain"></i>
+                        <!-- Python -->
+                        <div class="skill-logo">
 
-                            <span>Python</span>
+                            <div class="skill-icon">
+                                <i class="devicon-python-plain"></i>
+                            </div>
 
-                        </div>
+                            <div class="skill-info">
 
+                                <span class="skill-number">
+                                    01
+                                </span>
 
-                        <div class="skill-logo" title="JavaScript">
+                                <strong>
+                                    Python
+                                </strong>
 
-                            <i class="devicon-javascript-plain"></i>
+                                <small>
+                                    Programmation
+                                </small>
 
-                            <span>JavaScript</span>
-
-                        </div>
-
-
-                        <div class="skill-logo" title="HTML5">
-
-                            <i class="devicon-html5-plain"></i>
-
-                            <span>HTML5</span>
-
-                        </div>
-
-
-                        <div class="skill-logo" title="CSS3">
-
-                            <i class="devicon-css3-plain"></i>
-
-                            <span>CSS3</span>
+                            </div>
 
                         </div>
 
 
-                        <div class="skill-logo" title="C#">
+                        <!-- JS -->
+                        <div class="skill-logo">
 
-                            <i class="devicon-csharp-plain"></i>
+                            <div class="skill-icon">
+                                <i class="devicon-javascript-plain"></i>
+                            </div>
 
-                            <span>C# / Unity</span>
+                            <div class="skill-info">
+
+                                <span class="skill-number">
+                                    02
+                                </span>
+
+                                <strong>
+                                    JavaScript
+                                </strong>
+
+                                <small>
+                                    Développement web
+                                </small>
+
+                            </div>
 
                         </div>
+
+
+                        <!-- HTML -->
+                        <div class="skill-logo">
+
+                            <div class="skill-icon">
+                                <i class="devicon-html5-plain"></i>
+                            </div>
+
+                            <div class="skill-info">
+
+                                <span class="skill-number">
+                                    03
+                                </span>
+
+                                <strong>
+                                    HTML5
+                                </strong>
+
+                                <small>
+                                    Structure web
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CSS -->
+                        <div class="skill-logo">
+
+                            <div class="skill-icon">
+                                <i class="devicon-css3-plain"></i>
+                            </div>
+
+                            <div class="skill-info">
+
+                                <span class="skill-number">
+                                    04
+                                </span>
+
+                                <strong>
+                                    CSS3
+                                </strong>
+
+                                <small>
+                                    Interface & design
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- C# -->
+                        <div class="skill-logo">
+
+                            <div class="skill-icon">
+                                <i class="devicon-csharp-plain"></i>
+                            </div>
+
+                            <div class="skill-info">
+
+                                <span class="skill-number">
+                                    05
+                                </span>
+
+                                <strong>
+                                    C# / Unity
+                                </strong>
+
+                                <small>
+                                    Objectif jeu vidéo
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="skills-bottom-note">
+
+                        <span>
+                            +
+                        </span>
+
+                        <p>
+                            Cette section sera complétée au fur et à mesure
+                            de ma formation et de mes futurs projets.
+                        </p>
 
                     </div>
 
                 </div>
 
 
-                <!-- Outils -->
 
+                <!-- Outils -->
                 <div class="skills-panel panel reveal">
 
                     <div class="skills-panel-header">
 
                         <div>
+
                             <span class="card-label">
                                 ENVIRONNEMENT
                             </span>
@@ -693,68 +1363,189 @@
                             <h3>
                                 Outils
                             </h3>
+
                         </div>
+
+                        <span class="tools-counter">
+                            05 OUTILS
+                        </span>
 
                     </div>
 
 
-                    <p class="tools-description">
-                        Outils utilisés pour développer, organiser mes fichiers,
-                        suivre mes projets et travailler dans mon environnement.
+                    <p class="skills-description">
+                        Les principaux outils que j'utilise
+                        actuellement pour apprendre,
+                        coder et organiser mes projets.
                     </p>
+
 
                     <div class="tools-list">
 
+
                         <div class="tool-item">
+
+                            <span class="tool-number">
+                                01
+                            </span>
 
                             <i class="devicon-git-plain"></i>
 
-                            <span>Git</span>
+                            <div>
+
+                                <strong>
+                                    Git
+                                </strong>
+
+                                <small>
+                                    Gestion des versions
+                                </small>
+
+                            </div>
 
                         </div>
 
 
                         <div class="tool-item">
+
+                            <span class="tool-number">
+                                02
+                            </span>
 
                             <i class="devicon-github-original"></i>
 
-                            <span>GitHub</span>
+                            <div>
+
+                                <strong>
+                                    GitHub
+                                </strong>
+
+                                <small>
+                                    Hébergement & projets
+                                </small>
+
+                            </div>
 
                         </div>
 
 
                         <div class="tool-item">
+
+                            <span class="tool-number">
+                                03
+                            </span>
 
                             <i class="devicon-vscode-plain"></i>
 
-                            <span>Visual Studio Code</span>
+                            <div>
+
+                                <strong>
+                                    Visual Studio Code
+                                </strong>
+
+                                <small>
+                                    Éditeur de code
+                                </small>
+
+                            </div>
 
                         </div>
 
 
                         <div class="tool-item">
 
+                            <span class="tool-number">
+                                04
+                            </span>
+
                             <i class="devicon-visualstudio-plain"></i>
 
-                            <span>Visual Studio</span>
+                            <div>
+
+                                <strong>
+                                    Visual Studio
+                                </strong>
+
+                                <small>
+                                    Développement
+                                </small>
+
+                            </div>
 
                         </div>
 
 
                         <div class="tool-item windows-tool">
 
-                            <span class="windows-logo">⊞</span>
+                            <span class="tool-number">
+                                05
+                            </span>
 
-                            <span>Windows 11</span>
+                            <span class="windows-logo">
+                                ⊞
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Windows 11
+                                </strong>
+
+                                <small>
+                                    Environnement principal
+                                </small>
+
+                            </div>
 
                         </div>
 
                     </div>
 
-                    <div class="tools-footnote">
-                        <span>+</span>
-                        <p>Compétences en cours d'acquisition et amenées à évoluer avec la formation.</p>
-                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Complément compétences -->
+            <div class="learning-strip reveal">
+
+                <div>
+
+                    <span>
+                        ACTUELLEMENT
+                    </span>
+
+                    <strong>
+                        APPRENDRE
+                    </strong>
+
+                </div>
+
+                <div class="learning-line"></div>
+
+                <div>
+
+                    <span>
+                        PROCHAINE ÉTAPE
+                    </span>
+
+                    <strong>
+                        PRATIQUER
+                    </strong>
+
+                </div>
+
+                <div class="learning-line"></div>
+
+                <div>
+
+                    <span>
+                        OBJECTIF
+                    </span>
+
+                    <strong>
+                        CRÉER
+                    </strong>
 
                 </div>
 
@@ -763,17 +1554,28 @@
         </section>
 
 
+
         <!-- ========================= -->
         <!-- PROJETS -->
         <!-- ========================= -->
 
-        <section id="projets" class="section">
+        <section
+            id="projets"
+            class="section"
+        >
 
             <div class="section-header reveal">
 
                 <div>
-                    <span class="section-number">05</span>
-                    <span class="section-code">// PROJETS</span>
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <span class="section-code">
+                        // PROJETS
+                    </span>
+
                 </div>
 
                 <h2>
@@ -781,27 +1583,39 @@
                     <span>PROJETS</span>
                 </h2>
 
+                <p class="section-introduction">
+                    Cette partie évoluera avec ma formation.
+                    Mes futurs projets seront ajoutés ici
+                    avec les technologies utilisées
+                    et une présentation de leur fonctionnement.
+                </p>
+
             </div>
 
-            <p class="projects-intro reveal">
-                Les réalisations seront ajoutées au fur et à mesure de ma formation,
-                afin de présenter concrètement mon évolution et les technologies utilisées.
-            </p>
 
             <div class="projects-layout">
 
 
-                <!-- Projets scolaires -->
-
+                <!-- Scolaires -->
                 <div class="projects-column reveal">
 
                     <div class="projects-column-title">
 
-                        <span>01</span>
+                        <span>
+                            01
+                        </span>
 
-                        <h3>
-                            Projets scolaires
-                        </h3>
+                        <div>
+
+                            <h3>
+                                Projets scolaires
+                            </h3>
+
+                            <small>
+                                BTS SIO // SLAM
+                            </small>
+
+                        </div>
 
                     </div>
 
@@ -820,6 +1634,10 @@
 
                         </div>
 
+                        <div class="project-icon">
+                            &lt;/&gt;
+                        </div>
+
                         <h4>
                             Projets BTS SIO
                         </h4>
@@ -830,22 +1648,44 @@
                             progressivement ici.
                         </p>
 
+                        <div class="project-footer">
+
+                            <span>
+                                FORMATION
+                            </span>
+
+                            <span>
+                                PROCHAINEMENT
+                            </span>
+
+                        </div>
+
                     </article>
 
                 </div>
 
 
-                <!-- Projets professionnels -->
 
+                <!-- Professionnels -->
                 <div class="projects-column reveal">
 
                     <div class="projects-column-title">
 
-                        <span>02</span>
+                        <span>
+                            02
+                        </span>
 
-                        <h3>
-                            Projets professionnels
-                        </h3>
+                        <div>
+
+                            <h3>
+                                Projets professionnels
+                            </h3>
+
+                            <small>
+                                PERSONNEL // STAGE
+                            </small>
+
+                        </div>
 
                     </div>
 
@@ -864,16 +1704,34 @@
 
                         </div>
 
+                        <div class="project-icon">
+                            APP
+                        </div>
+
                         <h4>
                             Développement d'une application de bureau
                         </h4>
 
                         <p>
                             Projet professionnel prévu afin de mettre
-                            en pratique mes compétences en développement.
+                            en pratique mes compétences en développement
+                            et ma logique de programmation.
                         </p>
 
+                        <div class="project-footer">
+
+                            <span>
+                                APPLICATION
+                            </span>
+
+                            <span>
+                                À VENIR
+                            </span>
+
+                        </div>
+
                     </article>
+
 
 
                     <article class="project-card">
@@ -890,13 +1748,31 @@
 
                         </div>
 
+                        <div class="project-icon">
+                            STG
+                        </div>
+
                         <h4>
                             Projet de stage
                         </h4>
 
                         <p>
-                            Projet qui sera ajouté après mon futur stage.
+                            Projet qui sera ajouté après mon futur stage
+                            en développement prévu entre avril
+                            et juillet 2027.
                         </p>
+
+                        <div class="project-footer">
+
+                            <span>
+                                STAGE
+                            </span>
+
+                            <span>
+                                2027
+                            </span>
+
+                        </div>
 
                     </article>
 
@@ -907,23 +1783,40 @@
         </section>
 
 
+
         <!-- ========================= -->
         <!-- CONTACT -->
         <!-- ========================= -->
 
-        <section id="contact" class="section">
+        <section
+            id="contact"
+            class="section"
+        >
 
             <div class="section-header reveal">
 
                 <div>
-                    <span class="section-number">06</span>
-                    <span class="section-code">// CONTACT</span>
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+                    <span class="section-code">
+                        // CONTACT
+                    </span>
+
                 </div>
 
                 <h2>
                     ME
                     <span>CONTACTER</span>
                 </h2>
+
+                <p class="section-introduction">
+                    Pour une demande de stage,
+                    une question ou simplement pour échanger,
+                    vous pouvez me contacter directement.
+                </p>
 
             </div>
 
@@ -932,7 +1825,6 @@
 
 
                 <!-- Coordonnées -->
-
                 <div class="contact-information panel reveal">
 
                     <div class="contact-intro">
@@ -946,15 +1838,11 @@
                         </h3>
 
                         <p>
-                            Pour une demande de stage, une question
-                            ou simplement pour échanger autour du développement,
-                            vous pouvez me contacter directement.
+                            Je suis notamment à la recherche
+                            d'un stage de développement
+                            de 4 à 5 semaines entre avril
+                            et juillet 2027 à Roanne.
                         </p>
-
-                        <div class="contact-availability">
-                            <span>RECHERCHE ACTUELLE</span>
-                            <strong>STAGE DÉVELOPPEMENT · ROANNE · 2027</strong>
-                        </div>
 
                     </div>
 
@@ -963,7 +1851,6 @@
 
 
                         <!-- Email -->
-
                         <a
                             href="mailto:fabjo.lami11@gmail.com"
                             class="contact-item"
@@ -993,7 +1880,6 @@
 
 
                         <!-- Téléphone -->
-
                         <a
                             href="tel:+33641176566"
                             class="contact-item"
@@ -1023,7 +1909,6 @@
 
 
                         <!-- GitHub -->
-
                         <a
                             href="https://github.com/FabLK3"
                             target="_blank"
@@ -1055,7 +1940,6 @@
 
 
                         <!-- LinkedIn -->
-
                         <a
                             href="https://www.linkedin.com/in/fab%C3%AFjo-l-ami-b3325743a/"
                             target="_blank"
@@ -1087,8 +1971,9 @@
 
 
                         <!-- Ville -->
-
-                        <div class="contact-item contact-static">
+                        <div
+                            class="contact-item contact-static"
+                        >
 
                             <span class="contact-icon">
                                 LOC
@@ -1106,6 +1991,29 @@
 
                             </span>
 
+                            <span class="contact-arrow">
+                                FR
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-availability">
+
+                        <span class="availability-dot"></span>
+
+                        <div>
+
+                            <small>
+                                DISPONIBILITÉ
+                            </small>
+
+                            <strong>
+                                RECHERCHE DE STAGE 2027
+                            </strong>
+
                         </div>
 
                     </div>
@@ -1113,8 +2021,8 @@
                 </div>
 
 
-                <!-- Formulaire -->
 
+                <!-- Formulaire -->
                 <div class="contact-form-panel panel reveal">
 
                     <div class="contact-form-header">
@@ -1126,6 +2034,11 @@
                         <h3>
                             Envoyer un message
                         </h3>
+
+                        <p>
+                            Vous pouvez utiliser ce formulaire
+                            pour me contacter directement.
+                        </p>
 
                     </div>
 
@@ -1144,6 +2057,7 @@
                         action="https://formspree.io/f/TON_ID_FORMSPREE"
                         method="POST"
                     >
+
 
                         <div class="form-group">
 
@@ -1190,7 +2104,7 @@
                             <textarea
                                 id="message"
                                 name="message"
-                                rows="6"
+                                rows="7"
                                 placeholder="Votre message..."
                                 required
                             ></textarea>
@@ -1224,23 +2138,63 @@
     </main>
 
 
+    <!-- ========================= -->
     <!-- FOOTER -->
+    <!-- ========================= -->
 
     <footer class="site-footer">
 
         <div class="footer-inner">
 
-            <span>
-                © <span id="footer-year"></span> FABJO LAMI
-            </span>
+            <div class="footer-left">
 
-            <span>
-                BTS SIO // SLAM
-            </span>
+                <span class="footer-logo">
+                    FL
+                </span>
 
-            <a href="#accueil">
-                RETOUR EN HAUT ↑
-            </a>
+                <div>
+
+                    <strong>
+                        FABJO LAMI
+                    </strong>
+
+                    <small>
+                        PORTFOLIO // BTS SIO SLAM
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-center">
+
+                <span>
+                    ROANNE
+                </span>
+
+                <span>
+                    CNED
+                </span>
+
+                <span>
+                    BTS SIO
+                </span>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <span>
+                    © <span id="footer-year"></span>
+                </span>
+
+                <a href="#accueil">
+                    RETOUR EN HAUT ↑
+                </a>
+
+            </div>
 
         </div>
 
