@@ -1,195 +1,264 @@
 /* =========================================================
    PORTFOLIO FABJO LAMI
-   SCRIPT PRINCIPAL
    ========================================================= */
 
 
 /* =========================================================
-   ANNÉE AUTOMATIQUE DANS LE FOOTER
+   ANNÉE FOOTER
    ========================================================= */
 
-const footerYear = document.getElementById("footer-year");
+const footerYear =
+    document.getElementById(
+        "footer-year"
+    );
+
 
 if (footerYear) {
-    footerYear.textContent = new Date().getFullYear();
+
+    footerYear.textContent =
+        new Date().getFullYear();
+
 }
+
 
 
 /* =========================================================
    MENU MOBILE
    ========================================================= */
 
-const siteHeader = document.querySelector(".site-header");
-const menuButton = document.querySelector(".menu-button");
-const navigationLinks = document.querySelectorAll(".nav-link");
+const siteHeader =
+    document.querySelector(
+        ".site-header"
+    );
 
 
-if (siteHeader && menuButton) {
-
-    menuButton.addEventListener("click", () => {
-
-        const isOpen =
-            siteHeader.classList.toggle("open");
-
-        menuButton.classList.toggle(
-            "active",
-            isOpen
-        );
-
-        document.body.classList.toggle(
-            "menu-open",
-            isOpen
-        );
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
-
-    });
+const menuButton =
+    document.querySelector(
+        ".menu-button"
+    );
 
 
-    navigationLinks.forEach(link => {
+const navLinks =
+    document.querySelectorAll(
+        ".nav-link"
+    );
 
-        link.addEventListener("click", () => {
 
-            siteHeader.classList.remove("open");
+if (
+    siteHeader &&
+    menuButton
+) {
 
-            menuButton.classList.remove("active");
 
-            document.body.classList.remove(
-                "menu-open"
-            );
+    menuButton.addEventListener(
+        "click",
+        () => {
+
+
+            const opened =
+                siteHeader
+                    .classList
+                    .toggle("open");
+
+
+            menuButton
+                .classList
+                .toggle(
+                    "active",
+                    opened
+                );
+
+
+            document.body
+                .classList
+                .toggle(
+                    "menu-open",
+                    opened
+                );
+
 
             menuButton.setAttribute(
                 "aria-expanded",
-                "false"
+                String(opened)
             );
 
-        });
-
-    });
-
-}
-
-
-/* =========================================================
-   FERMER LE MENU MOBILE EN CLIQUANT À L'EXTÉRIEUR
-   ========================================================= */
-
-document.addEventListener("click", event => {
-
-    if (
-        !siteHeader ||
-        !menuButton ||
-        window.innerWidth > 850
-    ) {
-        return;
-    }
-
-
-    const clickInsideHeader =
-        siteHeader.contains(event.target);
-
-    const clickOnButton =
-        menuButton.contains(event.target);
-
-
-    if (
-        !clickInsideHeader &&
-        !clickOnButton &&
-        siteHeader.classList.contains("open")
-    ) {
-
-        siteHeader.classList.remove("open");
-
-        menuButton.classList.remove("active");
-
-        document.body.classList.remove(
-            "menu-open"
-        );
-
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
-
-});
-
-
-/* =========================================================
-   CURSEUR PERSONNALISÉ
-   ========================================================= */
-
-const cursor = document.querySelector(".cursor");
-const cursorDot = document.querySelector(".cursor-dot");
-
-
-let mouseX =
-    window.innerWidth / 2;
-
-let mouseY =
-    window.innerHeight / 2;
-
-
-let cursorX = mouseX;
-let cursorY = mouseY;
-
-
-if (cursor && cursorDot) {
-
-    window.addEventListener(
-        "mousemove",
-        event => {
-
-            mouseX = event.clientX;
-            mouseY = event.clientY;
-
-
-            cursorDot.style.left =
-                `${mouseX}px`;
-
-            cursorDot.style.top =
-                `${mouseY}px`;
 
         }
     );
 
 
-    const animateCursor = () => {
-
-        cursorX +=
-            (mouseX - cursorX) * 0.18;
-
-        cursorY +=
-            (mouseY - cursorY) * 0.18;
+}
 
 
-        cursor.style.left =
-            `${cursorX}px`;
 
-        cursor.style.top =
-            `${cursorY}px`;
+/* =========================================================
+   FERMER MENU APRÈS CLIC
+   ========================================================= */
+
+navLinks.forEach(
+    link => {
 
 
-        requestAnimationFrame(
-            animateCursor
+        link.addEventListener(
+            "click",
+            () => {
+
+
+                if (!siteHeader) {
+
+                    return;
+
+                }
+
+
+                siteHeader
+                    .classList
+                    .remove("open");
+
+
+                if (menuButton) {
+
+
+                    menuButton
+                        .classList
+                        .remove("active");
+
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                }
+
+
+                document.body
+                    .classList
+                    .remove(
+                        "menu-open"
+                    );
+
+
+            }
         );
 
-    };
+
+    }
+);
+
+
+
+/* =========================================================
+   CURSEUR
+   ========================================================= */
+
+const cursor =
+    document.querySelector(
+        ".cursor"
+    );
+
+
+const cursorDot =
+    document.querySelector(
+        ".cursor-dot"
+    );
+
+
+let mouseX =
+    window.innerWidth / 2;
+
+
+let mouseY =
+    window.innerHeight / 2;
+
+
+let cursorX =
+    mouseX;
+
+
+let cursorY =
+    mouseY;
+
+
+
+if (
+    cursor &&
+    cursorDot
+) {
+
+
+    window.addEventListener(
+        "mousemove",
+        event => {
+
+
+            mouseX =
+                event.clientX;
+
+
+            mouseY =
+                event.clientY;
+
+
+            cursorDot.style.left =
+                `${mouseX}px`;
+
+
+            cursorDot.style.top =
+                `${mouseY}px`;
+
+
+        }
+    );
+
+
+
+    const animateCursor =
+        () => {
+
+
+            cursorX +=
+                (
+                    mouseX -
+                    cursorX
+                ) * 0.18;
+
+
+            cursorY +=
+                (
+                    mouseY -
+                    cursorY
+                ) * 0.18;
+
+
+            cursor.style.left =
+                `${cursorX}px`;
+
+
+            cursor.style.top =
+                `${cursorY}px`;
+
+
+            requestAnimationFrame(
+                animateCursor
+            );
+
+
+        };
 
 
     requestAnimationFrame(
         animateCursor
     );
 
+
 }
 
 
+
 /* =========================================================
-   EFFET CURSEUR SUR LES ÉLÉMENTS CLIQUABLES
+   CURSEUR AU SURVOL
    ========================================================= */
 
 const interactiveElements =
@@ -199,109 +268,160 @@ const interactiveElements =
         button,
         input,
         textarea,
-        .skill-logo,
+        .skill-item,
         .tool-item,
-        .project-card,
-        .timeline-content,
-        .about-objectives > div
+        .project-card
         `
     );
 
 
-interactiveElements.forEach(element => {
+interactiveElements.forEach(
+    element => {
 
-    element.addEventListener(
-        "mouseenter",
-        () => {
 
-            if (cursor) {
-                cursor.classList.add("hover");
+        element.addEventListener(
+            "mouseenter",
+            () => {
+
+
+                if (cursor) {
+
+                    cursor
+                        .classList
+                        .add("hover");
+
+                }
+
+
             }
-
-        }
-    );
+        );
 
 
-    element.addEventListener(
-        "mouseleave",
-        () => {
+        element.addEventListener(
+            "mouseleave",
+            () => {
 
-            if (cursor) {
-                cursor.classList.remove("hover");
+
+                if (cursor) {
+
+                    cursor
+                        .classList
+                        .remove("hover");
+
+                }
+
+
             }
+        );
 
-        }
-    );
 
-});
+    }
+);
+
 
 
 /* =========================================================
-   ANIMATIONS D'APPARITION
+   APPARITION DES SECTIONS
    ========================================================= */
 
 const revealElements =
-    document.querySelectorAll(".reveal");
+    document.querySelectorAll(
+        ".reveal"
+    );
 
 
-if ("IntersectionObserver" in window) {
+if (
+    "IntersectionObserver"
+    in window
+) {
+
 
     const revealObserver =
         new IntersectionObserver(
 
             entries => {
 
-                entries.forEach(entry => {
 
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        entry.target
-                            .classList
-                            .add("visible");
+                entries.forEach(
+                    entry => {
 
 
-                        revealObserver
-                            .unobserve(
-                                entry.target
-                            );
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+
+                            entry.target
+                                .classList
+                                .add(
+                                    "visible"
+                                );
+
+
+                            revealObserver
+                                .unobserve(
+                                    entry.target
+                                );
+
+
+                        }
+
 
                     }
+                );
 
-                });
 
             },
 
             {
-                threshold: 0.12,
+
+                threshold: 0.1,
+
                 rootMargin:
                     "0px 0px -40px 0px"
+
             }
 
         );
 
 
-    revealElements.forEach(element => {
 
-        revealObserver.observe(element);
+    revealElements.forEach(
+        element => {
 
-    });
+
+            revealObserver.observe(
+                element
+            );
+
+
+        }
+    );
+
 
 }
 else {
 
-    revealElements.forEach(element => {
 
-        element.classList.add("visible");
+    revealElements.forEach(
+        element => {
 
-    });
+
+            element
+                .classList
+                .add("visible");
+
+
+        }
+    );
+
 
 }
 
 
+
 /* =========================================================
-   LIEN DE NAVIGATION ACTIF
+   SECTION ACTIVE DANS MENU
    ========================================================= */
 
 const sections =
@@ -310,74 +430,102 @@ const sections =
     );
 
 
-const setActiveNavigation =
+const updateActiveNavigation =
     sectionId => {
 
-        navigationLinks.forEach(link => {
 
-            const target =
-                link.getAttribute("href");
-
-            const isActive =
-                target === `#${sectionId}`;
+        navLinks.forEach(
+            link => {
 
 
-            link.classList.toggle(
-                "active",
-                isActive
-            );
+                const href =
+                    link.getAttribute(
+                        "href"
+                    );
 
-        });
+
+                link
+                    .classList
+                    .toggle(
+                        "active",
+                        href ===
+                        `#${sectionId}`
+                    );
+
+
+            }
+        );
+
 
     };
 
 
+
 if (
-    "IntersectionObserver" in window
+    "IntersectionObserver"
+    in window
 ) {
 
-    const sectionObserver =
+
+    const navigationObserver =
         new IntersectionObserver(
 
             entries => {
 
-                entries.forEach(entry => {
 
-                    if (
-                        entry.isIntersecting
-                    ) {
+                entries.forEach(
+                    entry => {
 
-                        setActiveNavigation(
-                            entry.target.id
-                        );
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+
+                            updateActiveNavigation(
+                                entry.target.id
+                            );
+
+
+                        }
+
 
                     }
+                );
 
-                });
 
             },
 
             {
+
                 rootMargin:
                     "-35% 0px -55% 0px",
 
                 threshold: 0
+
             }
 
         );
 
 
-    sections.forEach(section => {
+    sections.forEach(
+        section => {
 
-        sectionObserver.observe(section);
 
-    });
+            navigationObserver
+                .observe(section);
+
+
+        }
+    );
+
 
 }
 
 
+
 /* =========================================================
-   SCROLL DOUX SUR LES LIENS INTERNES
+   SCROLL DOUX
    ========================================================= */
 
 const internalLinks =
@@ -386,51 +534,71 @@ const internalLinks =
     );
 
 
-internalLinks.forEach(link => {
-
-    link.addEventListener(
-        "click",
-        event => {
-
-            const targetId =
-                link.getAttribute("href");
+internalLinks.forEach(
+    link => {
 
 
-            if (
-                !targetId ||
-                targetId === "#"
-            ) {
-                return;
-            }
+        link.addEventListener(
+            "click",
+            event => {
 
 
-            const targetSection =
-                document.querySelector(
-                    targetId
+                const targetId =
+                    link.getAttribute(
+                        "href"
+                    );
+
+
+                if (
+                    !targetId ||
+                    targetId === "#"
+                ) {
+
+                    return;
+
+                }
+
+
+                const target =
+                    document.querySelector(
+                        targetId
+                    );
+
+
+                if (!target) {
+
+                    return;
+
+                }
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView(
+                    {
+
+                        behavior:
+                            "smooth",
+
+                        block:
+                            "start"
+
+                    }
                 );
 
 
-            if (!targetSection) {
-                return;
             }
+        );
 
 
-            event.preventDefault();
+    }
+);
 
-
-            targetSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
-        }
-    );
-
-});
 
 
 /* =========================================================
-   BOUTON RETOUR EN HAUT
+   RETOUR EN HAUT
    ========================================================= */
 
 const backToTop =
@@ -439,31 +607,26 @@ const backToTop =
     );
 
 
-const updateBackToTop = () => {
-
-    if (!backToTop) {
-        return;
-    }
+const updateBackToTop =
+    () => {
 
 
-    if (
-        window.scrollY > 500
-    ) {
+        if (!backToTop) {
 
-        backToTop
-            .classList
-            .add("visible");
+            return;
 
-    }
-    else {
+        }
+
 
         backToTop
             .classList
-            .remove("visible");
+            .toggle(
+                "visible",
+                window.scrollY > 500
+            );
 
-    }
 
-};
+    };
 
 
 window.addEventListener(
@@ -478,64 +641,83 @@ window.addEventListener(
 updateBackToTop();
 
 
+
 /* =========================================================
-   PETIT EFFET PARALLAX DU FOND
+   FOND LÉGÈREMENT DYNAMIQUE
    ========================================================= */
 
-const glowOne =
+const lightOne =
     document.querySelector(
-        ".glow-one"
-    );
-
-const glowTwo =
-    document.querySelector(
-        ".glow-two"
+        ".background-light-one"
     );
 
 
-let ticking = false;
+const lightTwo =
+    document.querySelector(
+        ".background-light-two"
+    );
 
 
-const updateBackgroundPosition = () => {
-
-    const scrollPosition =
-        window.scrollY;
+let scrollAnimationRunning =
+    false;
 
 
-    if (glowOne) {
-
-        glowOne.style.marginTop =
-            `${scrollPosition * 0.025}px`;
-
-    }
+const updateBackground =
+    () => {
 
 
-    if (glowTwo) {
-
-        glowTwo.style.marginBottom =
-            `${scrollPosition * 0.015}px`;
-
-    }
+        const scrollY =
+            window.scrollY;
 
 
-    ticking = false;
+        if (lightOne) {
 
-};
+
+            lightOne.style.marginTop =
+                `${scrollY * 0.02}px`;
+
+
+        }
+
+
+        if (lightTwo) {
+
+
+            lightTwo.style.marginBottom =
+                `${scrollY * 0.012}px`;
+
+
+        }
+
+
+        scrollAnimationRunning =
+            false;
+
+
+    };
 
 
 window.addEventListener(
     "scroll",
     () => {
 
-        if (!ticking) {
+
+        if (
+            !scrollAnimationRunning
+        ) {
+
+
+            scrollAnimationRunning =
+                true;
+
 
             requestAnimationFrame(
-                updateBackgroundPosition
+                updateBackground
             );
 
-            ticking = true;
 
         }
+
 
     },
     {
@@ -544,137 +726,134 @@ window.addEventListener(
 );
 
 
-/* =========================================================
-   EFFET SUR LES CARTES COMPÉTENCES
-   ========================================================= */
-
-const skillCards =
-    document.querySelectorAll(
-        ".skill-logo"
-    );
-
-
-skillCards.forEach(card => {
-
-    card.addEventListener(
-        "mousemove",
-        event => {
-
-            if (
-                window.innerWidth <= 850
-            ) {
-                return;
-            }
-
-
-            const rectangle =
-                card.getBoundingClientRect();
-
-
-            const mousePositionX =
-                event.clientX -
-                rectangle.left;
-
-
-            const mousePositionY =
-                event.clientY -
-                rectangle.top;
-
-
-            const rotateY =
-                (
-                    mousePositionX /
-                    rectangle.width -
-                    0.5
-                ) * 4;
-
-
-            const rotateX =
-                (
-                    mousePositionY /
-                    rectangle.height -
-                    0.5
-                ) * -4;
-
-
-            card.style.transform =
-                `
-                translateY(-4px)
-                perspective(500px)
-                rotateX(${rotateX}deg)
-                rotateY(${rotateY}deg)
-                `;
-
-        }
-    );
-
-
-    card.addEventListener(
-        "mouseleave",
-        () => {
-
-            card.style.transform = "";
-
-        }
-    );
-
-});
-
 
 /* =========================================================
-   EFFET SUR LES CARTES PROJETS
+   FERMER LE MENU MOBILE EN CLIQUANT EN DEHORS
    ========================================================= */
 
-const projectCards =
-    document.querySelectorAll(
-        ".project-card"
-    );
+document.addEventListener(
+    "click",
+    event => {
 
 
-projectCards.forEach(card => {
+        if (
+            !siteHeader ||
+            !menuButton ||
+            window.innerWidth > 800
+        ) {
 
-    card.addEventListener(
-        "mouseenter",
-        () => {
+            return;
 
-            const projectCode =
-                card.querySelector(
-                    ".project-code"
+        }
+
+
+        const clickInsideMenu =
+            siteHeader.contains(
+                event.target
+            );
+
+
+        const clickOnButton =
+            menuButton.contains(
+                event.target
+            );
+
+
+        if (
+            !clickInsideMenu &&
+            !clickOnButton &&
+            siteHeader
+                .classList
+                .contains("open")
+        ) {
+
+
+            siteHeader
+                .classList
+                .remove("open");
+
+
+            menuButton
+                .classList
+                .remove("active");
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            document.body
+                .classList
+                .remove(
+                    "menu-open"
                 );
 
 
-            if (projectCode) {
+        }
 
-                projectCode.style.color =
-                    "#ff7a00";
+
+    }
+);
+
+
+
+/* =========================================================
+   REDIMENSIONNEMENT
+   ========================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+
+        if (
+            window.innerWidth > 800
+        ) {
+
+
+            if (siteHeader) {
+
+
+                siteHeader
+                    .classList
+                    .remove("open");
+
 
             }
 
-        }
-    );
+
+            if (menuButton) {
 
 
-    card.addEventListener(
-        "mouseleave",
-        () => {
+                menuButton
+                    .classList
+                    .remove("active");
 
-            const projectCode =
-                card.querySelector(
-                    ".project-code"
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
                 );
 
 
-            if (projectCode) {
-
-                projectCode.style.color =
-                    "";
-
             }
 
-        }
-    );
 
-});
+            document.body
+                .classList
+                .remove(
+                    "menu-open"
+                );
+
+
+        }
+
+
+    }
+);
+
 
 
 /* =========================================================
@@ -689,109 +868,35 @@ const contactForm =
 
 if (contactForm) {
 
-    const submitButton =
-        contactForm.querySelector(
-            ".form-button"
-        );
+
+    const formButton =
+        contactForm
+            .querySelector(
+                ".form-button"
+            );
 
 
     contactForm.addEventListener(
         "submit",
         () => {
 
-            if (!submitButton) {
+
+            if (!formButton) {
+
                 return;
+
             }
 
 
-            submitButton.innerHTML =
+            formButton.innerHTML =
                 `
-                Envoi en cours...
+                Envoi en cours
                 <span>→</span>
                 `;
 
+
         }
     );
+
 
 }
-
-
-/* =========================================================
-   AJUSTEMENT MENU AU REDIMENSIONNEMENT
-   ========================================================= */
-
-window.addEventListener(
-    "resize",
-    () => {
-
-        if (
-            window.innerWidth > 850 &&
-            siteHeader &&
-            menuButton
-        ) {
-
-            siteHeader
-                .classList
-                .remove("open");
-
-
-            menuButton
-                .classList
-                .remove("active");
-
-
-            document.body
-                .classList
-                .remove("menu-open");
-
-
-            menuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        }
-
-    }
-);
-
-
-/* =========================================================
-   PETIT EFFET DYNAMIQUE SUR LE TITRE DU PROFIL
-   ========================================================= */
-
-const profileSymbol =
-    document.querySelector(
-        ".profile-symbol"
-    );
-
-
-if (profileSymbol) {
-
-    profileSymbol.addEventListener(
-        "mouseenter",
-        () => {
-
-            profileSymbol.style.letterSpacing =
-                "0.08em";
-
-        }
-    );
-
-
-    profileSymbol.addEventListener(
-        "mouseleave",
-        () => {
-
-            profileSymbol.style.letterSpacing =
-                "";
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   FIN
-   ========================================================= */
